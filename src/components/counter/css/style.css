@@ -9,6 +9,14 @@
   --primary-color: #090ab2;
   --acent-color: #ffd00d;
   --text-color: #f9f9f6;
+  --background-color: #121212;
+  --card-background-color: #1e1e1e;
+  --text-color-dark: #e0e0e0;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color-dark);
 }
 
 #counter {
@@ -20,6 +28,7 @@
   align-items: center;
   padding: 28px;
   color: var(--text-color);
+  min-width: 360px;
 }
 
 #border {
@@ -27,15 +36,14 @@
   height: 100%;
   width: 100%;
   padding: 10px;
-
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--card-background-color);
 }
 
 #title {
   width: 35%;
-  font-size: 35px;
 }
 
 #time {
@@ -44,6 +52,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .acent-color {
   color: var(--acent-color);
 }
@@ -83,85 +92,49 @@
   text-align: center;
 }
 
-body {
-  background-color: #fff !important;
+.tick-credits {
+  display: none;
 }
 
-.tick-text-inline {
-  color: #595d63 !important;
-}
-
-.tick-label {
-  color: #595d63 !important;
-}
-
-.tick-flip-panel {
-  color: #fff !important;
-}
-
-.tick-flip-panel-text-wrapper {
-  line-height: 1.45 !important;
-}
-
-.tick-flip-panel {
-  background-color: #3c3e3c !important;
-}
-
-.tick-flip {
-  border-radius: 0.12em !important;
-}
-
-@media screen and (max-width: 1024px) {
+/* Responsive adjustments */
+@media (max-width: 895px) {
   #counter {
-    display: flex !important;
-    flex-direction: column !important;
-    background-color: #3c3e3c !important;
-    padding: 15px; /* reducimos el padding */
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
   }
 
   #title {
-    width: 100% !important;
-    font-size: 25px; /* reducimos el tamaño de fuente */
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  #time {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .tick-flip,
+  .tick-text-inline {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 768px) {
+  #title {
     margin-bottom: 15px;
   }
 
   .tick-flip,
   .tick-text-inline {
-    font-size: 2em; /* reducimos un poco el tamaño */
-  }
-
-  .tick-group {
-    margin: 0 0.3em; /* reducimos los márgenes */
+    font-size: 1em;
   }
 }
 
-@media screen and (max-width: 870px) {
-  .tick-group {
-    margin: 0; /* reducimos los márgenes */
-  }
-}
-@media screen and (max-width: 800px) {
-  .tick-flip,
-  .tick-text-inline {
-    font-size: 1.5em; /* reducimos un poco el tamaño */
-  }
-}
-@media screen and (max-width: 670px) {
+@media (max-width: 590px) {
   #border {
-    flex-direction: column !important;
-    gap: 20px; /* para separar el título del contador */
-  }
-
-  #title {
-    width: 100% !important;
-    text-align: center;
-  }
-
-  h1 {
-    font-size: 25px; /* reducimos el tamaño del título */
-  }
-
-  #time {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
   }
 }
