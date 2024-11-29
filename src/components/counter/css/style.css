@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  font-size: 50px;
 }
 
 :root {
@@ -36,6 +35,7 @@
 
 #title {
   width: 35%;
+  font-size: 35px;
 }
 
 #time {
@@ -99,10 +99,6 @@ body {
   color: #fff !important;
 }
 
-.tick-flip {
-  font-family: !important;
-}
-
 .tick-flip-panel-text-wrapper {
   line-height: 1.45 !important;
 }
@@ -113,4 +109,59 @@ body {
 
 .tick-flip {
   border-radius: 0.12em !important;
+}
+
+@media screen and (max-width: 1024px) {
+  #counter {
+    display: flex !important;
+    flex-direction: column !important;
+    background-color: #3c3e3c !important;
+    padding: 15px; /* reducimos el padding */
+  }
+
+  #title {
+    width: 100% !important;
+    font-size: 25px; /* reducimos el tamaño de fuente */
+    margin-bottom: 15px;
+  }
+
+  .tick-flip,
+  .tick-text-inline {
+    font-size: 2em; /* reducimos un poco el tamaño */
+  }
+
+  .tick-group {
+    margin: 0 0.3em; /* reducimos los márgenes */
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .tick-group {
+    margin: 0; /* reducimos los márgenes */
+  }
+}
+@media screen and (max-width: 800px) {
+  .tick-flip,
+  .tick-text-inline {
+    font-size: 1.5em; /* reducimos un poco el tamaño */
+  }
+}
+@media screen and (max-width: 670px) {
+  #border {
+    flex-direction: column !important;
+    gap: 20px; /* para separar el título del contador */
+  }
+
+  #title {
+    width: 100% !important;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 25px; /* reducimos el tamaño del título */
+  }
+
+  #time {
+    width: 100%;
+  }
 }
