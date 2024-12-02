@@ -1,15 +1,29 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
-  theme: {
-    colors: {
-      "primary-color": "#EBEBEB",
-      "secondary-color": "#3B6EFF",
-      "accent-color": "#FDC01A",
-      "black-color": "#484848",
-      "white-color": "#f5f5f5",
-    },
-    extend: {},
+  content: {
+    relative: true,
+    transform: (content) => content.replace(/taos:/g, ""),
+    files: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   },
-  plugins: [require("daisyui")],
+  plugins: [
+    require("daisyui"),
+    require("tailwindcss-animated"),
+    require("taos/plugin"),
+  ],
+  theme: {
+    extend: {
+      colors: {
+        "primary-color": "#EBEBEB",
+        "secondary-color": "#3B6EFF",
+        "accent-color": "#FDC01A",
+        "black-color": "#484848",
+        "white-color": "#f5f5f5",
+      },
+    },
+  },
+  safelist: [
+    "!duration-[0ms]",
+    "!delay-[0ms]",
+    'html.js :where([class*="taos:"]:not(.taos-init))',
+  ],
 };
