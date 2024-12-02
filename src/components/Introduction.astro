@@ -1,0 +1,154 @@
+<div class="container">
+  <h1>¿Qué es la jornada de emprendimiento?</h1>
+  <p>La jornada del emprendimiento es un día especial en el instituto Albarregas. En este día puede verse cómo las
+    empresas tienen un acercamiento hacia la Formación Profesional, dando consejos e información según sus
+    experiencias.</p>
+</div>
+
+<style>
+  body {
+  background: #3B6EFF;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: hidden;
+  scroll-snap-align: start;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: white;
+}
+
+.container {
+  background-color: #3B6EFF;
+  ;
+  border: 2px solid #FDC01A;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 800px;
+  text-align: center;
+  opacity: 0;
+  animation: fade 3s ease-in-out forwards;
+}
+
+h1 {
+  font-size: 36px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #F9CA12, #FFD700, #F9CA12);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: deslizar 1.5s ease-in-out, gradiente 4s infinite linear, brilloTexto 4s infinite alternate;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  animation: desvanecerTexto 2s ease-in-out;
+  animation-delay: 1.5s;
+}
+
+@media (max-width: 1440px) {
+  .container {
+    max-width: 80%;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 414px) {
+  .container {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes deslizar {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes desvanecerTexto {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes gradiente {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes brilloTexto {
+  0% {
+    text-shadow: 0 0 10px #F9CA12, 0 0 20px #FFD700, 0 0 30px #F9CA12;
+  }
+
+  100% {
+    text-shadow: 0 0 20px #FFD700, 0 0 30px #F9CA12, 0 0 40px #FFD700;
+  }
+}
+</style>
+
+
+<script is:inline>
+
+</script>
