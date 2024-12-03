@@ -24,6 +24,7 @@
 </div>
 
 <style>
+/* Reset de estilos y configuración básica */
 * {
   margin: 0;
   padding: 0;
@@ -38,7 +39,6 @@
   --white-color: #ffffff;
   --margin-bottom: 12px;
 }
-
 
 #companies {
   width: 100%;
@@ -64,11 +64,33 @@
   grid-template-rows: repeat(3, 1fr);
   justify-items: center;
   gap: 12px;
-  justify-content: center; /* Centrar el contenedor grid */
+  justify-content: center; 
 }
 
-.first,
-.second,
+.first{
+  width: 250px;
+  height: 200px;
+  background-color: #ffffff;
+  box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 8%;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: first 3.5s ease-in-out 2s forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
+}
+.second{
+  width: 250px;
+  height: 200px;
+  background-color: #ffffff;
+  box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 8%;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: first 3.5s ease-in-out 2s forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
 .third {
   width: 250px;
   height: 200px;
@@ -77,28 +99,27 @@
   border-radius: 8%;
   opacity: 0;
   transform: translateY(20px);
-  animation: first 0.5s ease-in-out 1s forwards;
+  animation: first 3.5s ease-in-out 2s forwards;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
 }
 
-img {
+#companies img {
   width: 100%;
   height: 100%;
   border-radius: 8%;
   transition: none;
   padding: 16px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-img:hover{
+#companies img:hover{
   transform: scale(1.05);
   background: white;
   padding: 16px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Definir la animación */
+
 @keyframes first {
   from {
     opacity: 0;
@@ -109,9 +130,6 @@ img:hover{
     transform: translateY(0);
   }
 }
-
-/* Estilos responsivos para pantallas de 414x896 */
-/* ... código existente ... */
 
 @media screen and (min-width: 360px) and (max-width: 600px) {
   #companies {
@@ -152,14 +170,10 @@ img:hover{
       transform: scale(1.1);
   }
 
-  img {
+  #companies img {
       width: 80%;
       height: 80%;
       object-fit: contain;
-  }
-
-  .footer {
-      width: 100%;
   }
 }
 </style>
