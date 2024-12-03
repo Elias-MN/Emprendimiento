@@ -190,17 +190,6 @@
 </html>
 
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body {
-        font-family: "Arial", "Helvetica", sans-serif;
-        background-color: #f5f5f5;
-        margin: 0;
-    }
 
     #cards {
         display: flex;
@@ -629,9 +618,9 @@
 </style>
 
 <script is:inline>
-    (() => {
+
         // Seleccionamos todas las tarjetas
-        const cards = document.querySelectorAll("info #card");
+        const cards = document.querySelectorAll("#card");
 
         // Creamos el observer para detectar cuando las tarjetas son visibles
         const observer = new IntersectionObserver(
@@ -645,7 +634,7 @@
 
                         // Animaciones para imagen
                         const lightImage = card.querySelector(
-                            'info img[id$="Light"]',
+                            'img[id$="Light"]',
                         );
                         if (lightImage) {
                             lightImage.style.animationPlayState = "running";
@@ -653,16 +642,16 @@
 
                         // Animaciones para texto
                         const paragraphs = card.querySelectorAll(
-                            "info .p-container p",
+                            ".p-container p",
                         );
                         paragraphs.forEach((p) => {
                             p.style.animationPlayState = "running";
                         });
 
                         // Animación de letras
-                        const h3 = card.querySelector("info h3.wavy");
+                        const h3 = card.querySelector("h3.wavy");
                         if (h3) {
-                            const spans = h3.querySelectorAll("info span");
+                            const spans = h3.querySelectorAll("span");
                             spans.forEach((span) => {
                                 span.style.animationPlayState = "running";
                             });
@@ -681,19 +670,19 @@
         // Preparar las tarjetas antes de observarlas
         cards.forEach((card) => {
             // Pausar todas las animaciones inicialmente
-            const lightImage = card.querySelector('info img[id$="Light"]');
+            const lightImage = card.querySelector('img[id$="Light"]');
             if (lightImage) {
                 lightImage.style.animationPlayState = "paused";
             }
 
-            const paragraphs = card.querySelectorAll("info .p-container p");
+            const paragraphs = card.querySelectorAll(".p-container p");
             paragraphs.forEach((p) => {
                 p.style.animationPlayState = "paused";
             });
 
-            const h3 = card.querySelector("info h3.wavy");
+            const h3 = card.querySelector("h3.wavy");
             if (h3) {
-                const spans = h3.querySelectorAll("info span");
+                const spans = h3.querySelectorAll("span");
                 spans.forEach((span) => {
                     span.style.animationPlayState = "paused";
                 });
@@ -704,7 +693,7 @@
         });
 
         // Seleccionar el contenedor del título
-        const titleContainer = document.querySelector("info .title-container");
+        const titleContainer = document.querySelector(".title-container");
 
         // Crear el observer para detectar visibilidad del contenedor
         const titleObserver = new IntersectionObserver(
@@ -713,7 +702,7 @@
                     if (entry.isIntersecting) {
                         // Añadir clase para activar la animación
                         entry.target
-                            .querySelector("info .animated-title")
+                            .querySelector(".animated-title")
                             .classList.add("visible");
 
                         // Detener la observación después de activar la animación
@@ -728,6 +717,6 @@
 
         // Iniciar la observación del contenedor
         titleObserver.observe(titleContainer);
-    })();
+
 </script>
 
