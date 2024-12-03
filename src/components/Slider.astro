@@ -8,34 +8,18 @@
     <meta name="generator" content="visualstudio">
     <meta name="application-name" content="Slider">
     <title>Slider</title>
-    <link rel="preload" href="./src/img/img1.jpg" as="image">
-    <link rel="preload" href="./src/img/img2.jpg" as="image">
-    <link rel="preload" href="./src/img/img3.jpg" as="image">
-    <link rel="preload" href="./src/img/img4.jpg" as="image">
-    <link rel="preload" href="./src/img/img1.jpg" as="image">
-    <link rel="preload" href="./src/img/img5.jpg" as="image">
-    <link rel="preload" href="./src/img/img6.jpg" as="image">
-    <link rel="preload" href="./src/img/img7.jpg" as="image">
-    <link rel="preload" href="./src/img/img8.jpg" as="image">
-    <link rel="preload" href="./src/img/img9.jpg" as="image">
-    <link rel="preload" href="./src/img/img10.jpg" as="image">
-    <link rel="preload" href="./src/img/img11.jpg" as="image">
-    <link rel="preload" href="./src/img/img12.jpg" as="image">
-
-
 
     <style>
         body {
-            overflow-Y: hidden;
+            overflow-X: hidden;
         }
 
         #slider-container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 80%;
+            width: 100%;
             height: 350px;
-            background-color: #06007f;
             position: relative;
             padding: 20px;
             border-radius: 8px;
@@ -45,7 +29,6 @@
         #slider-container h1 {
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif sans-serif;
             font-size: 40px;
-            color: #fff;
             position: relative;
             opacity: 0;
             transform: translateX(100%);
@@ -146,7 +129,7 @@
     </style>
 </head>
 <body>
-    <section id="slider-container">
+    <section id="slider-container" class="bg-black-color">
         <div>
             <h1>Ediciones Anteriores</h1>
         </div>

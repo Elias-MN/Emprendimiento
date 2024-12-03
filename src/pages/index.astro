@@ -1,17 +1,20 @@
 ---
-import Companies from "../components/Companies.astro";
 import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
 import Hero from "../components/Hero.astro";
-import Slider from "../components/Slider.astro";
 import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
+import Counter from "../components/Counter.astro";
+import Slider from "../components/Slider.astro";
+import Companies from "../components/Companies.astro";
+import Info from "../components/Info.astro";
 ---
 
 <Layout title="Web emprendimiento">
-
   <Header />
   <Hero />
+  <Info />
+  <Counter />
+  <Companies />
   <Slider />
   <Footer />
-  <Companies/>
 </Layout>
