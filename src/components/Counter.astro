@@ -1,8 +1,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://unpkg.com/@pqina/flip/dist/flip.min.css" rel="stylesheet">
-<!--<link href="./src/css/counter.css" rel="stylesheet"> -->
 <script src="https://unpkg.com/@pqina/flip/dist/flip.min.js" is:inline></script>
-<!--<script src="./src/js/counter.js" is:inline></script> -->
 
 <style>
 * {
@@ -110,7 +108,7 @@
 }
 
 .tick-credits {
-    display: none;
+    display: none !important;
 }
 
 @keyframes animArriba {
@@ -223,7 +221,7 @@
 <script is:inline>
 
 function handleTickInit(tick) {
-  // Configuración del idioma
+  // Language configuration (unchanged)
   var locale = {
     YEAR_PLURAL: 'Años',
     YEAR_SINGULAR: 'Año',
@@ -243,13 +241,13 @@ function handleTickInit(tick) {
     MILLISECOND_SINGULAR: 'Milisegundo'
   };
 
-  // Establecer las constantes de idioma
+  // Set language constants
   for (var key in locale) {
     if (!locale.hasOwnProperty(key)) { continue; }
     tick.setConstant(key, locale[key]);
   }
 
-  // Inicializar el contador
+  // Initialize countdown
   var countdownDate = "2025-02-03T00:00:00+01:00";
   var counter = Tick.count.down(countdownDate);
 
@@ -258,46 +256,53 @@ function handleTickInit(tick) {
   };
 
   counter.onended = function () {
-    // Aquí puedes añadir lo que sucede cuando termine la cuenta atrás
+    // Action when countdown ends
   };
 
-  // Configurar las animaciones después de que el contador esté iniciado
-  setTimeout(() => {
-    initializeAnimations();
-  }, 100);
-}
+  // Trigger animations manually with scroll
+  function triggerAnimations() {
+    const counterSection = document.querySelector('#counter');
+    const title = counterSection.querySelector('#title h1');
+    const tickGroups = counterSection.querySelectorAll('.tick-group');
 
-function initializeAnimations() {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        // Animar el título
-        const title = entry.target.querySelector('#title h1');
-        if (title) {
-          title.classList.add('animate');
-        }
+    // Animate title
+    if (title) {
+      title.style.opacity = '1';
+      title.style.transform = 'translateX(0)';
+    }
 
-        // Animar los grupos del contador
-        const tickGroups = entry.target.querySelectorAll('.tick-group');
-        tickGroups.forEach((group, index) => {
-          setTimeout(() => {
-            group.classList.add('animate');
-          }, index * 100);
-        });
-
-        observer.unobserve(entry.target);
-      }
+    // Animate tick groups
+    tickGroups.forEach((group, index) => {
+      setTimeout(() => {
+        group.style.opacity = '1';
+        group.style.transform = 'translateY(0)';
+      }, index * 100);
     });
-  }, {
-    threshold: 0.1,
-    rootMargin: '0px'
-  });
 
-  // Observar la sección del contador
-  const counterSection = document.querySelector('#counter');
-  if (counterSection) {
-    observer.observe(counterSection);
+    // Remove scroll listener after first trigger
+    window.removeEventListener('scroll', triggerAnimations);
   }
+
+  // Add scroll event listener
+  window.addEventListener('scroll', triggerAnimations);
 }
+
+// Modify CSS to support manual animation trigger
+document.addEventListener('DOMContentLoaded', () => {
+  const style = document.createElement('style');
+  style.textContent = `
+    #title h1 {
+      opacity: 0;
+      transform: translateX(-100%);
+      transition: opacity 1s, transform 1s;
+    }
+    .tick-group {
+      opacity: 0;
+      transform: translateY(100%);
+      transition: opacity 0.5s, transform 0.5s;
+    }
+  `;
+  document.head.appendChild(style);
+});
 
 </script>
