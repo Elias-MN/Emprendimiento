@@ -1,65 +1,38 @@
-<div id="companies">
+<div id="companies" class="bg-secondary-color">
 
-    <h1>Colaboradores</h1>
+    <h1 class="text-accent-color">Colaboradores</h1>
     
     <div class="parent">
-        <div class="div1 first block"><img src="../../public/images/companies/ilkeBenson.png" alt=""></div>
+        <div class="div1 first block bg-white-color"><img src="../../public/images/companies/ilkeBenson.png" alt=""></div>
 
-        <div class="div2 second block"><img src="../../public/images/companies/fpProfesional.png" alt=""></div>
+        <div class="div2 second block bg-white-color"><img src="../../public/images/companies/fpProfesional.png" alt=""></div>
 
-        <div class="div3 third block"><img src="../../public/images/companies/femec.png" alt=""></div>
+        <div class="div3 third block bg-white-color"><img src="../../public/images/companies/femec.png" alt=""></div>
 
-        <div class="div4 second block"><img src="../../public/images/companies/ayuntMerida.png" alt=""></div>
+        <div class="div4 second block bg-white-color"><img src="../../public/images/companies/ayuntMerida.png" alt=""></div>
 
-        <div class="div5 third block"><img src="../../public/images/companies/porsche.png" alt=""></div>
+        <div class="div5 third block bg-white-color"><img src="../../public/images/companies/porsche.png" alt=""></div>
 
-        <div class="div6 first block"><img src="../../public/images/companies/aDeArco.png" alt=""></div>
+        <div class="div6 first block bg-white-color"><img src="../../public/images/companies/aDeArco.png" alt=""></div>
 
-        <div class="div7 second block"><img src="../../public/images/companies/culturaEmprendedora.png" alt=""></div>
+        <div class="div7 second block bg-white-color"><img src="../../public/images/companies/culturaEmprendedora.png" alt=""></div>
 
-        <div class="div8 first block"><img src="../../public/images/companies/bigMat.png" alt=""></div>
+        <div class="div8 first block bg-white-color"><img src="../../public/images/companies/bigMat.png" alt=""></div>
 
-        <div class="div9 third block"><img src="../../public/images/companies/plastyAgro.png" alt=""></div>
+        <div class="div9 third block bg-white-color"><img src="../../public/images/companies/plastyAgro.png" alt=""></div>
     </div>
 </div>
 
 <style>
+/* Reset de estilos y configuración básica */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-:root {
-  --primary-color: #ffeb3b;
-  --secodary-color: #ffeb3b;
-  --acent-color: #3a005f;
-  --black-color: #000000;
-  --white-color: #ffffff;
-  --margin-bottom: 12px;
-}
-
-
-header {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(135deg, #fa964e, #81c784);
-  color: white;
-  text-align: center;
-}
-
-.footer {
-  width: 100%;
-  height: 300px;
-  background-color: rgb(62, 60, 60);
-}
-
 #companies {
   width: 100%;
-  background-color: #090AB2;
   padding-bottom: 24px;
   display: flex;
   justify-content: center;
@@ -71,7 +44,6 @@ header {
   text-align: center;
   padding: 40px;
   font-size: 3em;
-  color: #ffeb3b;
 }
 
 .parent {
@@ -81,41 +53,58 @@ header {
   grid-template-rows: repeat(3, 1fr);
   justify-items: center;
   gap: 12px;
-  justify-content: center; /* Centrar el contenedor grid */
+  justify-content: center; 
 }
 
-.first,
-.second,
-.third {
+.first{
   width: 250px;
   height: 200px;
-  background-color: #ffffff;
   box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.6);
   border-radius: 8%;
   opacity: 0;
   transform: translateY(20px);
-  animation: first 0.5s ease-in-out 1s forwards;
+  animation: first 3.5s ease-in-out 2s forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
+}
+.second{
+  width: 250px;
+  height: 200px;
+  box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 8%;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: first 3.5s ease-in-out 2s forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+.third {
+  width: 250px;
+  height: 200px;
+  box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 8%;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: first 3.5s ease-in-out 2s forwards;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
 }
 
-img {
+#companies img {
   width: 100%;
   height: 100%;
   border-radius: 8%;
   transition: none;
   padding: 16px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-img:hover{
+#companies img:hover{
   transform: scale(1.05);
-  background: white;
   padding: 16px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Definir la animación */
+
 @keyframes first {
   from {
     opacity: 0;
@@ -127,13 +116,7 @@ img:hover{
   }
 }
 
-/* Estilos responsivos para pantallas de 414x896 */
-/* ... código existente ... */
-
-@media screen and (min-width: 360px) and (max-width: 600px) {
-  header {
-      width: 100%;
-  }
+@media screen and (min-width: 300px) and (max-width: 420px) {
 
   #companies {
       width: 100%;
@@ -158,7 +141,6 @@ img:hover{
   .third {
       width: 200px;
       height: 150px;
-      background-color: white;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       display: flex;
@@ -173,14 +155,56 @@ img:hover{
       transform: scale(1.1);
   }
 
-  img {
+  #companies img {
       width: 80%;
       height: 80%;
       object-fit: contain;
   }
+}
 
-  .footer {
-      width: 100%;
-  }
+@media screen and (min-width: 420px) and (max-width: 600px) {
+
+#companies {
+    width: 100%;
+}
+
+#companies h1 {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.parent {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.first,
+.second,
+.third {
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.first:hover,
+.second:hover,
+.third:hover {
+    transform: scale(1.1);
+}
+
+#companies img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
 }
 </style>
