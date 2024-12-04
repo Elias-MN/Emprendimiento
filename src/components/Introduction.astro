@@ -1,12 +1,15 @@
+<div class="father-container">
 <div class="container">
-  <h1>¿Qué es la jornada de emprendimiento?</h1>
-  <p>La jornada del emprendimiento es un día especial en el instituto Albarregas. En este día puede verse cómo las
+  <h1 class="pregunta">¿Qué es la jornada de emprendimiento?</h1>
+  <p class="respuesta">La jornada del emprendimiento es un día especial en el instituto Albarregas. En este día puede verse cómo las
     empresas tienen un acercamiento hacia la Formación Profesional, dando consejos e información según sus
     experiencias.</p>
 </div>
+</div>
 
 <style>
-  body {
+
+  .father-container {
   background: #3B6EFF;
   background-size: cover;
   background-position: center;
@@ -36,7 +39,7 @@
   animation: fade 3s ease-in-out forwards;
 }
 
-h1 {
+.pregunta {
   font-size: 36px;
   text-transform: uppercase;
   background: linear-gradient(90deg, #F9CA12, #FFD700, #F9CA12);
@@ -46,7 +49,7 @@ h1 {
   animation: deslizar 1.5s ease-in-out, gradiente 4s infinite linear, brilloTexto 4s infinite alternate;
 }
 
-p {
+.respuesta {
   font-size: 18px;
   line-height: 1.6;
   animation: desvanecerTexto 2s ease-in-out;
