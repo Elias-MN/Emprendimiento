@@ -139,7 +139,7 @@
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
     #counter {
         height: auto;
         padding: 20px;
@@ -219,90 +219,117 @@
 </div>
 
 <script is:inline>
+  function handleTickInit(tick) {
+    // Language configuration
+    var locale = {
+      YEAR_PLURAL: 'Años',
+      YEAR_SINGULAR: 'Año',
+      MONTH_PLURAL: 'Meses',
+      MONTH_SINGULAR: 'Mes',
+      WEEK_PLURAL: 'Semanas',
+      WEEK_SINGULAR: 'Semana',
+      DAY_PLURAL: 'Días',
+      DAY_SINGULAR: 'Día',
+      HOUR_PLURAL: 'Horas',
+      HOUR_SINGULAR: 'Hora',
+      MINUTE_PLURAL: 'Minutos',
+      MINUTE_SINGULAR: 'Minuto',
+      SECOND_PLURAL: 'Segundos',
+      SECOND_SINGULAR: 'Segundo',
+      MILLISECOND_PLURAL: 'Milisegundos',
+      MILLISECOND_SINGULAR: 'Milisegundo'
+    };
 
-function handleTickInit(tick) {
-  // Language configuration (unchanged)
-  var locale = {
-    YEAR_PLURAL: 'Años',
-    YEAR_SINGULAR: 'Año',
-    MONTH_PLURAL: 'Meses',
-    MONTH_SINGULAR: 'Mes',
-    WEEK_PLURAL: 'Semanas',
-    WEEK_SINGULAR: 'Semana',
-    DAY_PLURAL: 'Días',
-    DAY_SINGULAR: 'Día',
-    HOUR_PLURAL: 'Horas',
-    HOUR_SINGULAR: 'Hora',
-    MINUTE_PLURAL: 'Minutos',
-    MINUTE_SINGULAR: 'Minuto',
-    SECOND_PLURAL: 'Segundos',
-    SECOND_SINGULAR: 'Segundo',
-    MILLISECOND_PLURAL: 'Milisegundos',
-    MILLISECOND_SINGULAR: 'Milisegundo'
-  };
+    // Set language constants
+    for (var key in locale) {
+      if (!locale.hasOwnProperty(key)) { continue; }
+      tick.setConstant(key, locale[key]);
+    }
 
-  // Set language constants
-  for (var key in locale) {
-    if (!locale.hasOwnProperty(key)) { continue; }
-    tick.setConstant(key, locale[key]);
-  }
+    // Initialize countdown
+    var countdownDate = "2025-02-03T00:00:00+01:00";
+    var counter = Tick.count.down(countdownDate);
 
-  // Initialize countdown
-  var countdownDate = "2025-02-03T00:00:00+01:00";
-  var counter = Tick.count.down(countdownDate);
+    counter.onupdate = function (value) {
+      tick.value = value;
+    };
 
-  counter.onupdate = function (value) {
-    tick.value = value;
-  };
+    counter.onended = function () {
+      // Action when countdown ends
+    };
 
-  counter.onended = function () {
-    // Action when countdown ends
-  };
-
-  // Trigger animations manually with scroll
-  function triggerAnimations() {
+    // Modify styles to prevent disappearance
     const counterSection = document.querySelector('#counter');
     const title = counterSection.querySelector('#title h1');
+    const timeSection = counterSection.querySelector('#time');
     const tickGroups = counterSection.querySelectorAll('.tick-group');
 
-    // Animate title
-    if (title) {
-      title.style.opacity = '1';
-      title.style.transform = 'translateX(0)';
-    }
-
-    // Animate tick groups
-    tickGroups.forEach((group, index) => {
-      setTimeout(() => {
-        group.style.opacity = '1';
-        group.style.transform = 'translateY(0)';
-      }, index * 100);
+    // Reset initial styles to ensure visibility
+    title.style.opacity = '0';
+    title.style.transform = 'translateX(-100%)';
+    timeSection.style.opacity = '0';
+    timeSection.style.transform = 'translateY(50%)';
+    tickGroups.forEach(group => {
+      group.style.opacity = '0';
+      group.style.transform = 'translateY(100%)';
     });
 
-    // Remove scroll listener after first trigger
-    window.removeEventListener('scroll', triggerAnimations);
+    // Create Intersection Observer
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (entry.target === title) {
+            title.style.opacity = '1';
+            title.style.transform = 'translateX(0)';
+          }
+
+          if (entry.target === timeSection) {
+            timeSection.style.opacity = '1';
+            timeSection.style.transform = 'translateY(0)';
+          }
+
+          if (entry.target.classList.contains('tick-group')) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    });
+
+    // Observe elements
+    observer.observe(title);
+    observer.observe(timeSection);
+    tickGroups.forEach(group => observer.observe(group));
   }
 
-  // Add scroll event listener
-  window.addEventListener('scroll', triggerAnimations);
-}
+  // Ensure permanent visibility with CSS
+  document.addEventListener('DOMContentLoaded', () => {
+    const style = document.createElement('style');
+    style.textContent = `
+      #counter, #border, #time, .tick-group {
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
+      #title h1 {
+        transition: opacity 1s, transform 1s;
+      }
+      #time {
+        transition: opacity 1s, transform 1s;
+      }
+      .tick-group {
+        transition: opacity 0.5s, transform 0.5s;
+      }
+    `;
+    document.head.appendChild(style);
 
-// Modify CSS to support manual animation trigger
-document.addEventListener('DOMContentLoaded', () => {
-  const style = document.createElement('style');
-  style.textContent = `
-    #title h1 {
-      opacity: 0;
-      transform: translateX(-100%);
-      transition: opacity 1s, transform 1s;
-    }
-    .tick-group {
-      opacity: 0;
-      transform: translateY(100%);
-      transition: opacity 0.5s, transform 0.5s;
-    }
-  `;
-  document.head.appendChild(style);
-});
-
-</script>
+  // Hide tick-credits
+  const tickCredits = document.querySelector('.tick-credits');
+  if (tickCredits) {
+    tickCredits.style.display = 'none';
+  }
+  });
+  </script>
