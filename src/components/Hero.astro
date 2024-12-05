@@ -20,7 +20,6 @@
   }
 
   :root {
-    --secondary-color: rgb(253, 192, 23);
     --secondary-color-light: rgba(253, 192, 23, 0.5);
     --background-dark: rgba(0, 0, 0, 0.5);
     --text-shadow-dark: rgba(0, 0, 0, 0.3);
@@ -30,7 +29,7 @@
     --logo-shadow-light: brightness(1)
       drop-shadow(0 0 5px var(--secondary-color-light));
     --logo-shadow-strong: brightness(1.5)
-      drop-shadow(0 0 20px var(--secondary-color));
+      drop-shadow(0 0 20px #FDC01A);
   }
 
   #hero-container {
@@ -52,7 +51,7 @@
     gap: 15%;
     overflow: hidden;
     scroll-snap-align: start;
-    animation: slideBackground 30s ease-in-out infinite;
+    animation: slideBackground 40s ease-in-out infinite;
   }
 
   #phrase {
@@ -65,7 +64,6 @@
   }
 
   #phrase span {
-    color: var(--secondary-color);
     font-size: 5.5vw;
     opacity: 0;
     transform: translateX(-100%);
@@ -89,7 +87,7 @@
   }
 
   #hero-container > img {
-    width: 30%;
+    width: 35%;
     opacity: 0;
     transform: translateY(50%) rotateY(0deg);
     transition: transform 0.5s ease-in-out;
@@ -107,7 +105,7 @@
     transform: translateX(-50%);
     width: 30px;
     height: 50px;
-    border: 2px solid var(--secondary-color);
+    border: 2px solid #FDC01A;
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -118,7 +116,7 @@
     content: "";
     width: 8px;
     height: 8px;
-    background-color: var(--secondary-color);
+    background-color: #FDC01A;
     border-radius: 50%;
     margin-top: 10px;
     animation: moveScroll 1.5s infinite;
@@ -215,9 +213,9 @@
     0% {
       background: linear-gradient(
         to right,
-        var(--secondary-color) 0%,
+        #FDC01A 0%,
         #fff 50%,
-        var(--secondary-color) 100%
+        #FDC01A 100%
       );
       background-size: 200% auto;
       -webkit-background-clip: text;
@@ -229,9 +227,9 @@
     25% {
       background: linear-gradient(
         to right,
-        var(--secondary-color) 0%,
+        #FDC01A 0%,
         #fff 50%,
-        var(--secondary-color) 100%
+        #FDC01A 100%
       );
       background-size: 200% auto;
       -webkit-background-clip: text;
@@ -244,9 +242,9 @@
     50% {
       background: linear-gradient(
         to right,
-        var(--secondary-color) 0%,
+        #FDC01A 0%,
         #fff 50%,
-        var(--secondary-color) 100%
+        #FDC01A 100%
       );
       background-size: 200% auto;
       -webkit-background-clip: text;
@@ -259,9 +257,9 @@
     75% {
       background: linear-gradient(
         to right,
-        var(--secondary-color) 0%,
+        #FDC01A 0%,
         #fff 50%,
-        var(--secondary-color) 100%
+        #FDC01A 100%
       );
       background-size: 200% auto;
       -webkit-background-clip: text;
@@ -274,9 +272,9 @@
     100% {
       background: linear-gradient(
         to right,
-        var(--secondary-color) 0%,
+        #FDC01A 0%,
         #fff 50%,
-        var(--secondary-color) 100%
+        #FDC01A 100%
       );
       background-size: 200% auto;
       -webkit-background-clip: text;
@@ -301,7 +299,6 @@
     }
   }
 
-
   @media screen and (width >= 1440px) {
     #hero-container {
       height: 95vh;
@@ -316,12 +313,11 @@
     }
   }
 
-
   @media screen and (width < 1000px) and (width >= 414px) {
 
   }
 
-  @media screen and (width < 500px) {
+  @media screen and (width < 501px) {
     #hero-container {
       flex-direction: column;
       gap: 5%;
@@ -339,5 +335,16 @@
     #phrase span {
       font-size: 10vw;
     }
+
+    #scroll-indicator {
+    width: 25px;
+    height: 40px;
+  }
+
+  #scroll-indicator::before {
+    width: 6px;
+    height: 0.35em;
+  }
+
   }
 </style>
