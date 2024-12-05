@@ -139,46 +139,105 @@
     }
 }
 
+@media (max-width: 1500px) {
+    #counter {
+        height: 40vh;
+        padding: 20px;
+    }
+
+    #border {
+        height: 35vh;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    #title {
+        width: 40%;
+    }
+
+    #title h1 {
+        font-size: 5vh;
+        line-height: 1.1;
+    }
+
+    #title span {
+        font-size: 5vh;
+    }
+
+    .tick-group {
+        margin: 0 0.3em;
+    }
+
+    .tick-flip,
+    .tick-text-inline {
+        font-size: 1.8em;
+    }
+}
+
 @media (max-width: 1200px) {
     #counter {
+        height: 35vh;
+        padding: 15px;
+    }
+
+    #border {
+        height: 30vh;
+        padding: 15px;
+        gap: 20px;
+    }
+
+    #title {
+        width: 45%;
+    }
+
+    #title h1,
+    #title span {
+        font-size: 4.5vh;
+    }
+
+    .tick {
+        gap: 15px;
+    }
+
+    .tick-flip,
+    .tick-text-inline {
+        font-size: 1.7em;
+    }
+}
+
+@media (max-width: 800px) {
+    #counter {
         height: auto;
-        padding: 20px;
+        padding: 15px;
     }
 
     #border {
         flex-direction: column;
         height: 100%;
-        padding: 20px;
-        gap: 40px;
+        padding: 15px;
+        gap: 30px;
     }
 
     #title {
         width: auto;
         text-align: center;
-        display: flex;
-        align-items: center;
     }
 
     #title h1,
     #title span {
-
         text-align: center;
         font-size: 3.5vh;
     }
 
     #time {
-        flex: 1;
-        display: flex;
-        overflow: hidden;
-        align-items: center;
-        align-content: flex-start;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .tick {
         flex-direction: row;
-        flex-wrap: wrap;
         justify-content: center;
-        gap: 20px;
+        gap: 15px;
     }
 
     .tick-flip,
@@ -187,7 +246,7 @@
     }
 
     .tick-group {
-        margin: 0 0.3em;
+        margin: 0 0.2em;
     }
 }
 
