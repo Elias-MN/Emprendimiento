@@ -1,19 +1,9 @@
-<!doctype html>
-<html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script type="module" src="./src/js/index.js" defer></script>
-        <title>Web Emprendimiento</title>
-    </head>
-
-    <body>
-        <div class="title-container">
-            <h1 class="animated-title">Familias profesionales</h1>
-        </div>
-    </body>
+<div class="bg-secondary-color info-container">
+    <div class="title-container">
+        <h1 class="animated-title text-accent-color">Familias profesionales</h1>
+    </div>
     <div id="cards">
-        <div id="card" class="green block">
+        <div id="card" class="bg-primary-color green block">
             <div class="img-container">
                 <img
                     id="greenLight"
@@ -60,7 +50,7 @@
             </div>
         </div>
 
-        <div id="card" class="blue block">
+        <div id="card" class="bg-primary-color blue block">
             <div class="text-content">
                 <h3 class="wavy">
                     <span style="--i:1;">C</span>
@@ -95,13 +85,21 @@
                 </div>
             </div>
             <div class="img-container">
-                <img id="blueLight" src="images/info/blue.png" alt="Bombilla azul" />
+                <img
+                    id="blueLight"
+                    src="images/info/blue.png"
+                    alt="Bombilla azul"
+                />
             </div>
         </div>
 
-        <div id="card" class="red block">
+        <div id="card" class="bg-primary-color red block">
             <div class="img-container">
-                <img id="redLight" src="images/info/red.png" alt="Bombilla roja" />
+                <img
+                    id="redLight"
+                    src="images/info/red.png"
+                    alt="Bombilla roja"
+                />
             </div>
             <div class="text-content">
                 <h3 class="wavy">
@@ -122,17 +120,7 @@
                     <span style="--i:15;">C</span>
                     <span style="--i:16;">o</span>
                     <span style="--i:17;">m</span>
-                    <span style="--i:18;">u</span>
-                    <span style="--i:19;">n</span>
-                    <span style="--i:20;">i</span>
-                    <span style="--i:21;">c</span>
-                    <span style="--i:22;">a</span>
-                    <span style="--i:23;">c</span>
-                    <span style="--i:24;">i</span>
-                    <span style="--i:25;">o</span>
-                    <span style="--i:26;">n</span>
-                    <span style="--i:27;">e</span>
-                    <span style="--i:28;">s</span>
+                    <span style="--i:18;">.</span>
                 </h3>
                 <div class="p-container">
                     <p>
@@ -146,7 +134,7 @@
             </div>
         </div>
 
-        <div id="card" class="purple block">
+        <div id="card" class="bg-primary-color purple block">
             <div class="text-content">
                 <h3 class="wavy">
                     <span style="--i:1;">E.</span>
@@ -187,9 +175,12 @@
             </div>
         </div>
     </div>
-</html>
+</div>
 
 <style>
+    .info-container{
+        padding: 2.5rem;
+    }
 
     #cards {
         display: flex;
@@ -230,7 +221,6 @@
     }
 
     .green {
-        background-color: rgba(0, 255, 0, 0.1);
         border: 2px solid green;
     }
 
@@ -240,7 +230,6 @@
     }
 
     .blue {
-        background-color: rgba(0, 0, 255, 0.1);
         border: 2px solid blue;
     }
 
@@ -250,7 +239,6 @@
     }
 
     .red {
-        background-color: rgba(255, 0, 0, 0.1);
         border: 2px solid red;
     }
 
@@ -260,7 +248,6 @@
     }
 
     .purple {
-        background-color: rgba(128, 0, 128, 0.1);
         border: 2px solid purple;
     }
 
@@ -334,7 +321,7 @@
     .p-container p {
         color: black;
         line-height: 1.6;
-        text-align: justify;
+        text-wrap: pretty;
         animation: appearText 1s ease;
         animation-play-state: paused;
     }
@@ -420,22 +407,12 @@
         align-items: center;
         height: 80px;
         overflow: hidden;
-        margin: 30px;
+        margin: 15px;
     }
 
     .animated-title {
         font-size: 3rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        background: linear-gradient(90deg, green, blue, purple, red);
-        background-size: 300%;
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation:
-            gradient-slide 5s infinite,
-            fade-in 1s ease-in-out,
-            pulse 3s infinite ease-in-out;
+        animation: fade-in 1s ease-in-out;
     }
 
     .animated-title::after {
@@ -444,9 +421,6 @@
         width: 100%;
         height: 4px;
         margin-top: 10px;
-        background: linear-gradient(90deg, green, blue, purple, red);
-        background-size: 300%;
-        animation: gradient-slide 5s infinite;
     }
 
     .animated-title {
@@ -458,10 +432,7 @@
     .animated-title.visible {
         opacity: 1;
         transform: translateY(0);
-        animation:
-            gradient-slide 5s infinite,
-            fade-in 1.5s ease-in-out,
-            pulse 3s infinite ease-in-out;
+        animation: fade-in 1.5s ease-in-out;
         animation-play-state: running;
     }
 
@@ -504,6 +475,10 @@
 
     /* Mobile - Large (414px) */
     @media (max-width: 1439px) and (min-width: 361px) {
+        .info-container{
+            padding: 1rem;
+        }
+        
         #card {
             flex-direction: column;
             height: auto;
@@ -521,6 +496,7 @@
 
         .img-container {
             padding: 10px;
+            order: -1;
         }
 
         .img-container img {
@@ -564,9 +540,6 @@
 
     /* Mobile - Small (360px) */
     @media (max-width: 361px) {
-        body {
-            font-size: 12px;
-        }
 
         .title-container {
             margin: 5px;
@@ -618,105 +591,98 @@
 </style>
 
 <script is:inline>
+    // Seleccionamos todas las tarjetas
+    const cards = document.querySelectorAll("#card");
 
-        // Seleccionamos todas las tarjetas
-        const cards = document.querySelectorAll("#card");
+    // Creamos el observer para detectar cuando las tarjetas son visibles
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const card = entry.target;
 
-        // Creamos el observer para detectar cuando las tarjetas son visibles
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        const card = entry.target;
+                    // Añadir clase de visibilidad
+                    card.classList.add("visible");
 
-                        // Añadir clase de visibilidad
-                        card.classList.add("visible");
-
-                        // Animaciones para imagen
-                        const lightImage = card.querySelector(
-                            'img[id$="Light"]',
-                        );
-                        if (lightImage) {
-                            lightImage.style.animationPlayState = "running";
-                        }
-
-                        // Animaciones para texto
-                        const paragraphs = card.querySelectorAll(
-                            ".p-container p",
-                        );
-                        paragraphs.forEach((p) => {
-                            p.style.animationPlayState = "running";
-                        });
-
-                        // Animación de letras
-                        const h3 = card.querySelector("h3.wavy");
-                        if (h3) {
-                            const spans = h3.querySelectorAll("span");
-                            spans.forEach((span) => {
-                                span.style.animationPlayState = "running";
-                            });
-                        }
-
-                        // Deja de observar la tarjeta después de que entre en el viewport
-                        observer.unobserve(card);
+                    // Animaciones para imagen
+                    const lightImage = card.querySelector('img[id$="Light"]');
+                    if (lightImage) {
+                        lightImage.style.animationPlayState = "running";
                     }
-                });
-            },
-            {
-                threshold: 0.1, // Dispara la animación cuando una pequeña parte de la tarjeta es visible
-            },
-        );
 
-        // Preparar las tarjetas antes de observarlas
-        cards.forEach((card) => {
-            // Pausar todas las animaciones inicialmente
-            const lightImage = card.querySelector('img[id$="Light"]');
-            if (lightImage) {
-                lightImage.style.animationPlayState = "paused";
-            }
+                    // Animaciones para texto
+                    const paragraphs = card.querySelectorAll(".p-container p");
+                    paragraphs.forEach((p) => {
+                        p.style.animationPlayState = "running";
+                    });
 
-            const paragraphs = card.querySelectorAll(".p-container p");
-            paragraphs.forEach((p) => {
-                p.style.animationPlayState = "paused";
+                    // Animación de letras
+                    const h3 = card.querySelector("h3.wavy");
+                    if (h3) {
+                        const spans = h3.querySelectorAll("span");
+                        spans.forEach((span) => {
+                            span.style.animationPlayState = "running";
+                        });
+                    }
+
+                    // Deja de observar la tarjeta después de que entre en el viewport
+                    observer.unobserve(card);
+                }
             });
+        },
+        {
+            threshold: 0.1, // Dispara la animación cuando una pequeña parte de la tarjeta es visible
+        },
+    );
 
-            const h3 = card.querySelector("h3.wavy");
-            if (h3) {
-                const spans = h3.querySelectorAll("span");
-                spans.forEach((span) => {
-                    span.style.animationPlayState = "paused";
-                });
-            }
+    // Preparar las tarjetas antes de observarlas
+    cards.forEach((card) => {
+        // Pausar todas las animaciones inicialmente
+        const lightImage = card.querySelector('img[id$="Light"]');
+        if (lightImage) {
+            lightImage.style.animationPlayState = "paused";
+        }
 
-            // Comenzar a observar cada tarjeta
-            observer.observe(card);
+        const paragraphs = card.querySelectorAll(".p-container p");
+        paragraphs.forEach((p) => {
+            p.style.animationPlayState = "paused";
         });
 
-        // Seleccionar el contenedor del título
-        const titleContainer = document.querySelector(".title-container");
+        const h3 = card.querySelector("h3.wavy");
+        if (h3) {
+            const spans = h3.querySelectorAll("span");
+            spans.forEach((span) => {
+                span.style.animationPlayState = "paused";
+            });
+        }
 
-        // Crear el observer para detectar visibilidad del contenedor
-        const titleObserver = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        // Añadir clase para activar la animación
-                        entry.target
-                            .querySelector(".animated-title")
-                            .classList.add("visible");
+        // Comenzar a observar cada tarjeta
+        observer.observe(card);
+    });
 
-                        // Detener la observación después de activar la animación
-                        titleObserver.unobserve(entry.target);
-                    }
-                });
-            },
-            {
-                threshold: 0.5, // Dispara la animación cuando el 50% del contenedor sea visible
-            },
-        );
+    // Seleccionar el contenedor del título
+    const titleContainer = document.querySelector(".title-container");
 
-        // Iniciar la observación del contenedor
-        titleObserver.observe(titleContainer);
+    // Crear el observer para detectar visibilidad del contenedor
+    const titleObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    // Añadir clase para activar la animación
+                    entry.target
+                        .querySelector(".animated-title")
+                        .classList.add("visible");
 
+                    // Detener la observación después de activar la animación
+                    titleObserver.unobserve(entry.target);
+                }
+            });
+        },
+        {
+            threshold: 0.5, // Dispara la animación cuando el 50% del contenedor sea visible
+        },
+    );
+
+    // Iniciar la observación del contenedor
+    titleObserver.observe(titleContainer);
 </script>
-
