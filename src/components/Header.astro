@@ -45,6 +45,7 @@
     font-family: Verdana;
     padding: 0.5rem;
     position: absolute;
+    top: 0;
     z-index: 2;
     box-shadow: rgb(72, 72, 72 / 35%) 0px 5px 15px;
     overflow: hidden;
@@ -199,25 +200,35 @@
 
   /* Media Queries para adaptarse a diferentes tamaños de pantalla */
   /* 414px x 896px (móvil grande) */
-  @media screen and (width < 1440px) and (width > 414px) {
+  @media screen and (width < 1440px) and (width >= 414px) {
     header {
       height: 100px;
     }
 
     #albarregasImage {
-      padding: 0.5rem;
+      display: none;
     }
 
     #celebrationDays {
-      width: 40%;
+      width: 30%;
+      font-size: 2vw;
     }
 
     #whiteBar {
       width: 80px;
     }
 
+    h5 {
+      font-size: 2.5vw;
+    }
+
     #webParts {
-      width: 50%;
+      width: 70%;
+      font-size: 2.5vw;
+    }
+
+    #webParts span:first-child {
+      display: none;
     }
 
     #webParts span:hover::after {
@@ -252,15 +263,25 @@
     }
 
     #celebrationDays {
-      width: 40%;
+      width: 30%;
+      font-size: 2vw;
     }
 
     #whiteBar {
       width: 40px;
     }
 
+    h5 {
+      font-size: 2.5vw;
+    }
+
     #webParts {
-      width: 60%;
+      width: 70%;
+      font-size: 2.5vw;
+    }
+
+    #webParts span:first-child {
+      display: none;
     }
 
     #webParts span:hover::after {
