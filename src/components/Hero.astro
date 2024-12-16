@@ -1,57 +1,343 @@
-<div class="hero bg-base-200 min-h-screen">
-  <div class="hero-content flex-col lg:flex-row">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
-      class="max-w-sm rounded-lg shadow-2xl
-      delay-[400ms]
-      duration-[600ms]
-      taos:translate-x-[-200px]
-      taos:opacity-0"
-      data-taos-offset="100"
-    />
-    <div>
-      <h1
-        class="text-5xl font-bold animate-flip-up animate-once animate-ease-in-out"
-      >
-        Box Office News!
-      </h1>
-      <p class="py-6">
-        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-        excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a
-        id nisi.
-      </p>
-      <button
-        class="btn btn-primary animate-bounce animate-twice animate-ease-out animate-fill-forwards"
-        >Get Started</button
-      >
-    </div>
+<div id="hero-container">
+  <div id="phrase">
+    <span>Jornada del</span>
+    <span>Emprendimiento</span>
+    <span>Sostenible</span>
   </div>
-
-  <div class="hero-content flex-col lg:flex-row">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
-      class="max-w-sm rounded-lg shadow-2xl
-      delay-[400ms]
-      duration-[600ms]
-      taos:translate-x-[-200px]
-      taos:opacity-0"
-      data-taos-offset="100"
-    />
-    <div>
-      <h1
-        class="text-5xl font-bold animate-flip-up animate-once animate-ease-in-out"
-      >
-        Box Office News!
-      </h1>
-      <p class="py-6">
-        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-        excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a
-        id nisi.
-      </p>
-      <button
-        class="btn btn-primary animate-bounce animate-twice animate-ease-out animate-fill-forwards"
-        >Get Started</button
-      >
-    </div>
-  </div>
+  <img
+    src="images/hero/logoAulaEmpren.png"
+    alt="Logo del Aula de Emprendimiento"
+  />
+  <div id="scroll-indicator"></div>
 </div>
+
+<style>
+  :root {
+    --secondary-color-light: rgba(253, 192, 23, 0.5);
+    --background-dark: rgba(0, 0, 0, 0.5);
+    --text-shadow-dark: rgba(0, 0, 0, 0.3);
+    --text-shadow-light: rgba(255, 255, 255, 0.2);
+    --text-shadow: 5px 5px 10px var(--text-shadow-dark),
+      -5px -5px 10px var(--text-shadow-light);
+    --logo-shadow-light: brightness(1)
+      drop-shadow(0 0 5px var(--secondary-color-light));
+    --logo-shadow-strong: brightness(1.5)
+      drop-shadow(0 0 20px #FDC01A);
+  }
+
+  #hero-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(
+        var(--background-dark),
+        var(--background-dark)
+      ),
+      url(../images/hero/acueducto.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 88vh;
+    gap: 15%;
+    overflow: hidden;
+    scroll-snap-align: start;
+    animation: slideBackground 40s ease-in-out infinite;
+  }
+
+  #phrase {
+    display: flex;
+    flex-direction: column;
+    transition:
+      transform 0.5s ease,
+      opacity 0.5s ease,
+      font-size 0.5s ease;
+  }
+
+  #phrase span {
+    font-size: 5.5vw;
+    opacity: 0;
+    transform: translateX(-100%);
+    text-shadow: var(--text-shadow);
+    animation:
+      shineText 4s infinite,
+      spanSlideIn 1.2s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+    animation-fill-mode: forwards;
+  }
+
+  #phrase span:nth-child(1) {
+    animation-delay: 0s;
+  }
+
+  #phrase span:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+
+  #phrase span:nth-child(3) {
+    animation-delay: 0.8s;
+  }
+
+  #hero-container > img {
+    width: 35%;
+    opacity: 0;
+    transform: translateY(50%) rotateY(0deg);
+    transition: transform 0.5s ease-in-out;
+    animation:
+      logoScroll 1s ease-out forwards,
+      logoGlow 2s infinite alternate,
+      logoRotateY 2s ease-out 1 forwards;
+    animation-delay: 1.2s, 2.2s;
+  }
+
+  #scroll-indicator {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 50px;
+    border: 2px solid #FDC01A;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    animation: bounce 1.5s infinite;
+  }
+
+  #scroll-indicator::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: #FDC01A;
+    border-radius: 50%;
+    margin-top: 10px;
+    animation: moveScroll 1.5s infinite;
+  }
+
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateX(-50%) translateY(0);
+    }
+    50% {
+      transform: translateX(-50%) translateY(10px);
+    }
+  }
+
+  @keyframes moveScroll {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(15px);
+    }
+  }
+
+  @keyframes spanSlideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+
+    80% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    90% {
+      transform: translateX(-10px);
+    }
+
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes logoScroll {
+    from {
+      opacity: 0;
+      transform: translateY(50%);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes logoGlow {
+    0% {
+      filter: var(--logo-shadow-light);
+    }
+
+    100% {
+      filter: var(--logo-shadow-strong);
+    }
+  }
+
+  @keyframes logoRotateY {
+    from {
+      transform: translateY(0) rotateY(-360deg);
+    }
+
+    to {
+      transform: translateY(0) rotateY(360deg);
+    }
+  }
+
+  @keyframes appearFromBelow {
+    from {
+      bottom: -50px;
+      opacity: 0;
+      transform: translateX(-50%);
+    }
+
+    to {
+      bottom: 20px;
+      opacity: 1;
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes shineText {
+    0% {
+      background: linear-gradient(
+        to right,
+        #FDC01A 0%,
+        #fff 50%,
+        #FDC01A 100%
+      );
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+
+    25% {
+      background: linear-gradient(
+        to right,
+        #FDC01A 0%,
+        #fff 50%,
+        #FDC01A 100%
+      );
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      background-position: 50% 0;
+    }
+
+    50% {
+      background: linear-gradient(
+        to right,
+        #FDC01A 0%,
+        #fff 50%,
+        #FDC01A 100%
+      );
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      background-position: 100% 0;
+    }
+
+    75% {
+      background: linear-gradient(
+        to right,
+        #FDC01A 0%,
+        #fff 50%,
+        #FDC01A 100%
+      );
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      background-position: 150% 0;
+    }
+
+    100% {
+      background: linear-gradient(
+        to right,
+        #FDC01A 0%,
+        #fff 50%,
+        #FDC01A 100%
+      );
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      background-position: 200% 0;
+    }
+  }
+
+  @keyframes slideBackground {
+    0% {
+      background-position: 0% 0%;
+    }
+
+    50% {
+      background-position: 100% 0%;
+    }
+
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+
+  @media screen and (width >= 1440px) {
+    #hero-container {
+      height: 95vh;
+    }
+
+    #phrase span {
+      font-size: 5rem;
+    }
+
+    #hero-container > img {
+      width: 400px;
+    }
+  }
+
+  @media screen and (width < 1000px) and (width >= 414px) {
+
+  }
+
+  @media screen and (width < 501px) {
+    #hero-container {
+      flex-direction: column;
+      gap: 5%;
+    }
+
+    #hero-container > img {
+      width: 45%;
+    }
+
+    #phrase {
+      margin-right: 0;
+      text-align: center;
+    }
+
+    #phrase span {
+      font-size: 10vw;
+    }
+
+    #scroll-indicator {
+    width: 25px;
+    height: 40px;
+  }
+
+  #scroll-indicator::before {
+    width: 6px;
+    height: 0.35em;
+  }
+
+  }
+</style>
