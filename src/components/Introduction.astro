@@ -1,59 +1,41 @@
-<div class="father-container">
-<div class="container">
-  <h1 class="pregunta">¿Qué es la jornada de emprendimiento?</h1>
-  <p class="respuesta">La jornada del emprendimiento es un día especial en el instituto Albarregas. En este día puede verse cómo las
-    empresas tienen un acercamiento hacia la Formación Profesional, dando consejos e información según sus
-    experiencias.</p>
-</div>
+<div class="introduction-container border-solid accent-accent-color bg-secondary-color ">
+  <div class="introduction-card delay-[300ms] duration-[600ms] taos:translate-y-[100%] taos:opacity-0 bg-white my-4" data-taos-offset="-300">
+    <h1>¿QUÉ ES LA JORNADA DE EMPRENDIMIENTO?</h1>
+    <p>La jornada del emprendimiento es un día especial en el instituto Albarregas. En este día puede verse cómo las
+      empresas tienen un acercamiento hacia la Formación Profesional, dando consejos e información según sus
+      experiencias.</p>
+  </div>
 </div>
 
 <style>
 
-  .father-container {
-  background: #3B6EFF;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  overflow: hidden;
-  scroll-snap-align: start;
+.introduction-container {
   font-family: 'Arial', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   margin: 0;
-  color: white;
 }
 
-.container {
-  background-color: #3B6EFF;
-  ;
-  border: 2px solid #FDC01A;
+.introduction-card {
   padding: 20px;
   border-radius: 10px;
   width: 80%;
   max-width: 800px;
   text-align: center;
-  opacity: 0;
-  animation: fade 3s ease-in-out forwards;
 }
 
-.pregunta {
+.introduction-card>h1 {
   font-size: 36px;
-  text-transform: uppercase;
   background: linear-gradient(90deg, #F9CA12, #FFD700, #F9CA12);
   background-size: 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: deslizar 1.5s ease-in-out, gradiente 4s infinite linear, brilloTexto 4s infinite alternate;
 }
 
-.respuesta {
+.introduction-card>p {
   font-size: 18px;
   line-height: 1.6;
-  animation: desvanecerTexto 2s ease-in-out;
-  animation-delay: 1.5s;
 }
 
 @media (max-width: 1440px) {
@@ -100,7 +82,7 @@
   }
 }
 
-@keyframes fade {
+/* @keyframes fade {
   0% {
     opacity: 0;
   }
@@ -108,9 +90,9 @@
   100% {
     opacity: 1;
   }
-}
+} */
 
-@keyframes deslizar {
+/* @keyframes deslizar {
   0% {
     transform: translateX(-100%);
   }
@@ -148,7 +130,7 @@
   100% {
     text-shadow: 0 0 20px #FFD700, 0 0 30px #F9CA12, 0 0 40px #FFD700;
   }
-}
+} */
 </style>
 
 
