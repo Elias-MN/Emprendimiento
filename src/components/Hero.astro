@@ -40,11 +40,12 @@
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 88vh;
+    height: 100vh;
     gap: 15%;
+    margin-top: 100px;
     overflow: hidden;
     scroll-snap-align: start;
-    animation: slideBackground 40s ease-in-out infinite;
+    animation: slideBackground 60s ease-in-out infinite;
   }
 
   #phrase {
@@ -57,7 +58,7 @@
   }
 
   #phrase span {
-    font-size: 5.5vw;
+    font-size: 5.3vw;
     opacity: 0;
     transform: translateX(-100%);
     text-shadow: var(--text-shadow);
@@ -80,7 +81,7 @@
   }
 
   #hero-container > img {
-    width: 35%;
+    width: 30%;
     opacity: 0;
     transform: translateY(50%) rotateY(0deg);
     transition: transform 0.5s ease-in-out;
@@ -293,17 +294,7 @@
   }
 
   @media screen and (width >= 1440px) {
-    #hero-container {
-      height: 95vh;
-    }
 
-    #phrase span {
-      font-size: 5rem;
-    }
-
-    #hero-container > img {
-      width: 400px;
-    }
   }
 
   @media screen and (width < 1000px) and (width >= 414px) {
