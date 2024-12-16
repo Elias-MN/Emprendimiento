@@ -39,7 +39,7 @@
 }
 
 #title {
-    width: 30%;
+    width: 34%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -50,7 +50,6 @@
 #title h1 {
     font-size: 6vh;
     line-height: 1.2;
-    animation: animDcha 1s ease-out;
 
     span{
         white-space: nowrap;
@@ -85,7 +84,6 @@
 .tick-group {
     margin: 0 0.5em;
     text-align: center;
-    animation: animArriba 0.5s ease-out;
 }
 
 .tick-label {
@@ -109,34 +107,6 @@
 
 .tick-credits {
     display: none !important;
-}
-
-@keyframes animArriba {
-    from {
-        transform: translateY(100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes animDcha {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    60% {
-        transform: translateX(30%);
-        opacity: 1;
-    }
-    80% {
-        transform: translateX(-10%);
-    }
-    100% {
-        transform: translateX(0);
-    }
 }
 
 @media (max-width: 1500px) {
@@ -255,13 +225,13 @@
 <div id="counter">
   <div id="border">
 
-      <div id="title">
+      <div id="title" class="delay-[100ms] duration-[600ms] taos:translate-x-[-100%] taos:opacity-0" data-taos-offset="-100">
           <h1>JORNADA DEL EMPRENDIMIENTO <span class="acent-color">comienza en<span></h1>
       </div>
 
       <div id="time" class="tick" data-did-init="handleTickInit">
           <div data-repeat="true" data-layout="horizontal fit" data-transform="preset(d, h, m, s) -> delay">
-              <div class="tick-group">
+              <div class="tick-group delay-[300ms] duration-[600ms] taos:translate-y-[100%] taos:opacity-0" data-taos-offset="300">
                   <div data-key="value" data-repeat="true" data-transform="pad(00) -> split -> delay">
                       <span data-view="flip"></span>
                   </div>
