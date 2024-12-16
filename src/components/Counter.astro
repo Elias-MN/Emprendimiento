@@ -1,27 +1,394 @@
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/@pqina/flip/dist/flip.min.css" rel="stylesheet">
+<script src="https://unpkg.com/@pqina/flip/dist/flip.min.js" is:inline></script>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --primary-color: #090ab2;
+    --acent-color: #ffd00d;
+    --text-color: #f9f9f6;
+}
+
+#counter {
+    background-color: var(--primary-color);
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 28px;
+    color: var(--text-color);
+}
+
+#border {
+    border: 3px solid var(--acent-color);
+    width: 100%;
+    height: 40vh;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+#title {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+
+}
+
+#title h1 {
+    font-size: 6vh;
+    line-height: 1.2;
+    animation: animDcha 1s ease-out;
+
+    span{
+        white-space: nowrap;
+    }
+}
+
+#title span {
+    font-size: 6vh;
+    white-space: nowrap;
+}
+
+#time {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.acent-color {
+    color: var(--acent-color);
+}
+
+.tick {
+    font-size: 1rem;
+    white-space: nowrap;
+    font-family: arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.tick-group {
+    margin: 0 0.5em;
+    text-align: center;
+    animation: animArriba 0.5s ease-out;
+}
+
+.tick-label {
+    margin-top: 0.5em;
+    font-size: clamp(0.8rem, 1.5vw, 1em);
+}
+
+.tick-char {
+    width: 1.5em;
+}
+
+.tick-text-inline {
+    display: inline-block;
+    text-align: center;
+    min-width: 1em;
+}
+
+.tick-text-inline+.tick-text-inline {
+    margin-left: -.325em;
+}
+
+.tick-credits {
+    display: none !important;
+}
+
+@keyframes animArriba {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes animDcha {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    60% {
+        transform: translateX(30%);
+        opacity: 1;
+    }
+    80% {
+        transform: translateX(-10%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 1500px) {
+    #counter {
+        height: 40vh;
+        padding: 20px;
+    }
+
+    #border {
+        height: 35vh;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    #title {
+        width: 40%;
+    }
+
+    #title h1 {
+        font-size: 5vh;
+        line-height: 1.1;
+    }
+
+    #title span {
+        font-size: 5vh;
+    }
+
+    .tick-group {
+        margin: 0 0.3em;
+    }
+
+    .tick-flip,
+    .tick-text-inline {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 1200px) {
+    #counter {
+        height: 35vh;
+        padding: 15px;
+    }
+
+    #border {
+        height: 30vh;
+        padding: 15px;
+        gap: 20px;
+    }
+
+    #title {
+        width: 45%;
+    }
+
+    #title h1,
+    #title span {
+        font-size: 4.5vh;
+    }
+
+    .tick {
+        gap: 15px;
+    }
+
+    .tick-flip,
+    .tick-text-inline {
+        font-size: 1.7em;
+    }
+}
+
+@media (max-width: 800px) {
+    #counter {
+        height: auto;
+        padding: 15px;
+    }
+
+    #border {
+        flex-direction: column;
+        height: 100%;
+        padding: 15px;
+        gap: 30px;
+    }
+
+    #title {
+        width: auto;
+        text-align: center;
+    }
+
+    #title h1,
+    #title span {
+        text-align: center;
+        font-size: 3.5vh;
+    }
+
+    #time {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .tick {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .tick-flip,
+    .tick-text-inline {
+        font-size: 2em;
+    }
+
+    .tick-group {
+        margin: 0 0.2em;
+    }
+}
+
+</style>
+
 <div id="counter">
   <div id="border">
 
-    <div id="title">
-      <h1>
-        <span class="acent-color"></span>
-      </h1>
-    </div>
+      <div id="title">
+          <h1>JORNADA DEL EMPRENDIMIENTO <span class="acent-color">comienza en<span></h1>
+      </div>
 
+      <div id="time" class="tick" data-did-init="handleTickInit">
+          <div data-repeat="true" data-layout="horizontal fit" data-transform="preset(d, h, m, s) -> delay">
+              <div class="tick-group">
+                  <div data-key="value" data-repeat="true" data-transform="pad(00) -> split -> delay">
+                      <span data-view="flip"></span>
+                  </div>
 
-    <div id="time" class="tick" data-did-init="handleTickInit">
-      <div data-repeat="true" data-layout="horizontal fit" data-transform="preset(d, h, m, s) -> delay">
-        <div class="tick-group">
-          <div data-key="value" data-repeat="true" data-transform="pad(00) -> split -> delay">
-            <span data-view="flip"></span>
+                  <span data-key="label" data-view="text" class="tick-label"></span>
+              </div>
           </div>
-
-          <span data-key="label" data-view="text" class="tick-label"></span>
-        </div>
+          <div class="tick-onended-message" style="display: none">
+              <p>Time's up</p>
+          </div>
       </div>
-      <div class="tick-onended-message" style="display: none">
-        <p>Time's up</p>
-      </div>
-    </div>
 
   </div>
 </div>
+
+<script is:inline>
+  function handleTickInit(tick) {
+    // Language configuration
+    var locale = {
+      YEAR_PLURAL: 'Años',
+      YEAR_SINGULAR: 'Año',
+      MONTH_PLURAL: 'Meses',
+      MONTH_SINGULAR: 'Mes',
+      WEEK_PLURAL: 'Semanas',
+      WEEK_SINGULAR: 'Semana',
+      DAY_PLURAL: 'Días',
+      DAY_SINGULAR: 'Día',
+      HOUR_PLURAL: 'Horas',
+      HOUR_SINGULAR: 'Hora',
+      MINUTE_PLURAL: 'Minutos',
+      MINUTE_SINGULAR: 'Minuto',
+      SECOND_PLURAL: 'Segundos',
+      SECOND_SINGULAR: 'Segundo',
+      MILLISECOND_PLURAL: 'Milisegundos',
+      MILLISECOND_SINGULAR: 'Milisegundo'
+    };
+
+    // Set language constants
+    for (var key in locale) {
+      if (!locale.hasOwnProperty(key)) { continue; }
+      tick.setConstant(key, locale[key]);
+    }
+
+    // Initialize countdown
+    var countdownDate = "2025-02-03T00:00:00+01:00";
+    var counter = Tick.count.down(countdownDate);
+
+    counter.onupdate = function (value) {
+      tick.value = value;
+    };
+
+    counter.onended = function () {
+      // Action when countdown ends
+    };
+
+    // Modify styles to prevent disappearance
+    const counterSection = document.querySelector('#counter');
+    const title = counterSection.querySelector('#title h1');
+    const timeSection = counterSection.querySelector('#time');
+    const tickGroups = counterSection.querySelectorAll('.tick-group');
+
+    // Reset initial styles to ensure visibility
+    title.style.opacity = '0';
+    title.style.transform = 'translateX(-100%)';
+    timeSection.style.opacity = '0';
+    timeSection.style.transform = 'translateY(50%)';
+    tickGroups.forEach(group => {
+      group.style.opacity = '0';
+      group.style.transform = 'translateY(100%)';
+    });
+
+    // Create Intersection Observer
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (entry.target === title) {
+            title.style.opacity = '1';
+            title.style.transform = 'translateX(0)';
+          }
+
+          if (entry.target === timeSection) {
+            timeSection.style.opacity = '1';
+            timeSection.style.transform = 'translateY(0)';
+          }
+
+          if (entry.target.classList.contains('tick-group')) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    });
+
+    // Observe elements
+    observer.observe(title);
+    observer.observe(timeSection);
+    tickGroups.forEach(group => observer.observe(group));
+  }
+
+  // Ensure permanent visibility with CSS
+  document.addEventListener('DOMContentLoaded', () => {
+    const style = document.createElement('style');
+    style.textContent = `
+      #counter, #border, #time, .tick-group {
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
+      #title h1 {
+        transition: opacity 1s, transform 1s;
+      }
+      #time {
+        transition: opacity 1s, transform 1s;
+      }
+      .tick-group {
+        transition: opacity 0.5s, transform 0.5s;
+      }
+    `;
+    document.head.appendChild(style);
+
+  // Hide tick-credits
+  const tickCredits = document.querySelector('.tick-credits');
+  if (tickCredits) {
+    tickCredits.style.display = 'none';
+  }
+  });
+  </script>
