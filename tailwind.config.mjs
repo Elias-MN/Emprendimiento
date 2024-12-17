@@ -20,6 +20,10 @@ export default {
         "white-color": "#f5f5f5",
       },
     },
+    screens: {
+      'smallMobile': '360px',
+      'bigMobile': '414px',
+    },
   },
   safelist: [
     "!duration-[0ms]",
