@@ -13,7 +13,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        "primary-color": "#EBEBEB",
+        "primary-color": "#f8f8f8",
         "secondary-color": "#3B6EFF",
         "accent-color": "#FDC01A",
         "black-color": "#484848",
@@ -23,6 +23,8 @@ export default {
     screens: {
       'smallMobile': '360px',
       'bigMobile': '414px',
+      'tablet': '720px',
+      'computer': '1024px'
     },
   },
   safelist: [
