@@ -1,8 +1,8 @@
 <div id="hero-container">
   <div id="phrase">
-    <span>Jornada del</span>
-    <span>Emprendimiento</span>
-    <span>Sostenible</span>
+    <span class="text-accent-color">Jornada del</span>
+    <span class="text-accent-color">Emprendimiento</span>
+    <span class="text-accent-color">Sostenible</span>
   </div>
   <img
     src="images/hero/logoAulaEmpren.webp"
@@ -13,7 +13,7 @@
 
 <style>
   :root {
-    --secondary-color-light: rgba(253, 192, 23, 0.5);
+    --secondary-color-light: rgb(253, 192, 23);
     --background-dark: rgba(0, 0, 0, 0.5);
     --text-shadow-dark: rgba(0, 0, 0, 0.3);
     --text-shadow-light: rgba(255, 255, 255, 0.2);
@@ -59,7 +59,7 @@
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    padding: 16px;
+    padding: 12px;
   }
 
   #phrase span {
@@ -68,9 +68,21 @@
     transform: translateX(-100%);
     text-shadow: var(--text-shadow);
     animation:
-      shineText 4s infinite,
       spanSlideIn 1.2s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
     animation-fill-mode: forwards;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    text-shadow: 0.5px 0.5px 0.5px #cc9b13,
+             0.5px 1px 0.5px #cc9b13,
+             0.5px 1.5px 0.5px #cc9b13,
+             0.5px 2px 0.5px #cc9b13,
+             0.5px 2.5px 0.5px #cc9b13,
+             0.5px 3px 0.5px #cc9b13,
+             1px 10px 5px rgba(16, 16, 16, 0.5),
+             1px 15px 10px rgba(16, 16, 16, 0.4),
+             1px 20px 30px rgba(16, 16, 16, 0.3),
+             1px 25px 50px rgba(16, 16, 16, 0.2);
   }
 
   #phrase span:nth-child(1) {
@@ -268,24 +280,29 @@
     }
   }
 
-  @media screen and (width < 414px) {
+  @media screen and (width < 500px) {
     #hero-container {
       flex-direction: column;
       gap: 5%;
-      margin-top: 60px;
     }
 
     #hero-container > img {
       width: 45%;
     }
 
+    #phrase span {
+      font-size: 10vw;
+    }
+  }
+
+  @media screen and (width < 414px) {
+    #hero-container {
+      margin-top: 60px;
+    }
+
     #phrase {
       margin-right: 0;
       text-align: center;
-    }
-
-    #phrase span {
-      font-size: 10vw;
     }
 
     #scroll-indicator {
