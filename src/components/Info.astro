@@ -51,16 +51,16 @@
         <!-- Buttons -->
         <div class="flex gap-4 mt-4 justify-end">
           <button
-            class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+            class="py-2 px-4 bg-black-color text-accent-color rounded"
             onclick="openModal('horarioModal')"
           >
-            <box-icon name="calendar"></box-icon>
+            Horario
           </button>
           <button
-            class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
+            class="py-2 px-4 bg-black-color text-accent-color rounded"
             onclick="openModal('detallesModal')"
           >
-            <box-icon name="info-circle"></box-icon>
+            Ver detalles
           </button>
         </div>
       </div>
@@ -101,16 +101,16 @@
         <!-- Buttons -->
         <div class="flex gap-4 mt-4">
           <button
-            class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+            class="py-2 px-4 bg-black-color text-accent-color rounded"
             onclick="openModal('horarioModal')"
           >
-            <box-icon name="calendar"></box-icon>
+            Horario
           </button>
           <button
-            class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
+            class="py-2 px-4 bg-black-color text-accent-color rounded"
             onclick="openModal('detallesModal')"
           >
-            <box-icon name="info-circle"></box-icon>
+            Ver detalles
           </button>
         </div>
       </div>
@@ -150,16 +150,16 @@
         <!-- Buttons -->
         <div class="flex gap-4 mt-4 justify-end">
           <button
-            class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+            class="py-2 px-4 bg-black-color text-accent-color rounded"
             onclick="openModal('horarioModal')"
           >
-            <box-icon name="calendar"></box-icon>
+            Horario
           </button>
           <button
-            class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
+            class="py-2 px-4 bg-black-color text-accent-color rounded"
             onclick="openModal('detallesModal')"
           >
-            <box-icon name="info-circle"></box-icon>
+            Ver detalles
           </button>
         </div>
       </div>
@@ -198,16 +198,16 @@
         <!-- Buttons -->
         <div class="flex gap-4 mt-4">
           <button
-            class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+            class="py-2 px-4 bg-black-color text-accent-color rounded"
             onclick="openModal('horarioModal')"
           >
-            <box-icon name="calendar"></box-icon>
+            Horario
           </button>
           <button
-            class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
+            class="py-2 px-4 bg-black-color text-accent-color rounded"
             onclick="openModal('detallesModal')"
           >
-            <box-icon name="info-circle"></box-icon>
+            Ver detalles
           </button>
         </div>
       </div>
@@ -225,21 +225,117 @@
 <!-- Modals -->
 <div
   id="horarioModal"
-  class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden"
+  class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-50 hidden"
   onclick="closeModal('horarioModal')"
 >
   <div
-    class="bg-white p-6 rounded-lg shadow-lg max-w-md w-full"
-    onclick="event.stopPropagation()"
+    class="bg-white rounded-lg overflow-hidden shadow-2xl max-w-4xl w-full mx-4 p-6"
   >
-    <h2 class="text-lg font-bold mb-4">Horario</h2>
-    <p class="mb-6">Aquí va el contenido del horario.</p>
-    <button
-      class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
-      onclick="closeModal('horarioModal')"
+    <div
+      class="bg-gradient-to-r from-red-900 to-red-600 text-white p-4 flex justify-between items-center"
     >
-      Cerrar
-    </button>
+      <h2 class="text-2xl font-extrabold">Horario del dia 3</h2>
+      <button
+        class="text-white text-3xl font-bold hover:text-red-400 transition duration-300"
+        onclick="closeModal('horarioModal')">&times;</button
+      >
+    </div>
+    <div class="overflow-x-auto mt-4 max-h-96 overflow-y-auto">
+      <table
+        class="min-w-full bg-white border border-gray-300 rounded-lg shadow-lg"
+      >
+        <thead class="bg-gradient-to-r from-red-900 to-red-600 text-white">
+          <tr>
+            <th class="py-2 px-4 text-left">Hora</th>
+            <th class="py-2 px-4 text-left">Actividad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="bg-gray-100 text-black text-center">
+            <td class="py-2 px-4">16:00</td>
+            <td class="py-2 px-4"
+              >Primer acercamiento del alumnado a las empresas. Visita a stands
+              de empresas con información sobre proyectos, tecnologías, etc.</td
+            >
+          </tr>
+          <tr class="bg-gray-200 text-black text-center">
+            <td class="py-2 px-4">17:00</td>
+            <td class="py-2 px-4"
+              >Comienzo de las jornadas. Presentación breve a cargo del maestro
+              de ceremonias.</td
+            >
+          </tr>
+          <tr class="bg-gray-100 text-black text-center">
+            <td class="py-2 px-4">17:05</td>
+            <td class="py-2 px-4"
+              >Empresa 1 (Inquiba): Charla presentación de la empresa.</td
+            >
+          </tr>
+          <tr class="bg-gray-200 text-black text-center">
+            <td class="py-2 px-4">17:25</td>
+            <td class="py-2 px-4"
+              >Empresa 2 (Grupo Oesía): Charla presentación de la empresa.</td
+            >
+          </tr>
+          <tr class="bg-gray-100 text-black text-center">
+            <td class="py-2 px-4">17:45</td>
+            <td class="py-2 px-4"
+              >Empresa 3 (Logirail): Charla presentación de la empresa.</td
+            >
+          </tr>
+          <tr class="bg-gray-200 text-black text-center">
+            <td class="py-2 px-4">18:05</td>
+            <td class="py-2 px-4"
+              >Empresa 4 (Bittacora): Charla presentación de la empresa.</td
+            >
+          </tr>
+          <tr class="bg-gray-100 text-black text-center">
+            <td class="py-2 px-4">18:25</td>
+            <td class="py-2 px-4"
+              >Descanso. 35 minutos. Alumnado puede continuar visitando los
+              stands de las empresas.</td
+            >
+          </tr>
+          <tr class="bg-gray-200 text-black text-center">
+            <td class="py-2 px-4">19:00</td>
+            <td class="py-2 px-4"
+              >Empresa 5 (Ayesa): Charla presentación de la empresa.</td
+            >
+          </tr>
+          <tr class="bg-gray-100 text-black text-center">
+            <td class="py-2 px-4">19:20</td>
+            <td class="py-2 px-4"
+              >Empresa 6 (Resulto Consultoría): Charla presentación de la
+              empresa.</td
+            >
+          </tr>
+          <tr class="bg-gray-200 text-black text-center">
+            <td class="py-2 px-4">19:40</td>
+            <td class="py-2 px-4"
+              >Empresa 7 (Stemdo): Charla presentación de la empresa.</td
+            >
+          </tr>
+          <tr class="bg-gray-100 text-black text-center">
+            <td class="py-2 px-4">20:00</td>
+            <td class="py-2 px-4"
+              >Empresa 8 (Plexus): Charla presentación de la empresa.</td
+            >
+          </tr>
+          <tr class="bg-gray-200 text-black text-center">
+            <td class="py-2 px-4">20:30</td>
+            <td class="py-2 px-4"
+              >Mesa redonda. Empresarios y alumnado actual de dual.</td
+            >
+          </tr>
+          <tr class="bg-gray-100 text-black text-center">
+            <td class="py-2 px-4">21:30</td>
+            <td class="py-2 px-4"
+              >Clausura de las jornadas. Agradecimientos y consideraciones.</td
+            >
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
 
@@ -734,10 +830,12 @@
 <script is:inline>
   function openModal(modalId) {
     document.getElementById(modalId).classList.remove("hidden");
+    document.body.classList.add("overflow-hidden");
   }
 
   function closeModal(modalId) {
     document.getElementById(modalId).classList.add("hidden");
+    document.body.classList.remove("overflow-hidden");
   }
 
   // Seleccionamos todas las tarjetas
