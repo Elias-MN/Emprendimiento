@@ -216,28 +216,28 @@
   class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-10 hidden"
   onclick="closeModal('horarioModalAdministracionGestion')"
 >
-<div
-  class="bg-white rounded-lg overflow-hidden shadow-2xl max-w-4xl w-full mx-4 p-6"
->
-  <div class="bg-blue-700 text-white p-4 flex justify-between items-center">
-    <h2 class="text-2xl font-extrabold">Horario del dia 3</h2>
-    <button
-      class="text-white text-3xl font-bold hover:text-red-400 transition duration-300"
-      onclick="closeModal('horarioModal')">&times;</button
-    >
-  </div>
-  <div class="overflow-x-auto mt-4 max-h-96 overflow-y-auto">
-    <table
-      class="min-w-full bg-white border border-gray-300 rounded-lg shadow-lg"
-    >
-      <thead class="bg-blue-700 text-white">
-        <tr>
-          <th class="py-2 px-4 text-center">Hora</th>
-          <th class="py-2 px-4 text-center">Actividad</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="bg-gray-100 text-black text-center">
+  <div
+    class="bg-white rounded-lg overflow-hidden shadow-2xl max-w-4xl w-full mx-4 p-6"
+  >
+    <div class="bg-blue-700 text-white p-4 flex justify-between items-center">
+      <h2 class="text-2xl font-extrabold">Horario del dia 3</h2>
+      <button
+        class="text-white text-3xl font-bold hover:text-red-400 transition duration-300"
+        onclick="closeModal('horarioModal')">&times;</button
+      >
+    </div>
+    <div class="overflow-x-auto mt-4 max-h-96 overflow-y-auto">
+      <table
+        class="min-w-full bg-white border border-gray-300 rounded-lg shadow-lg"
+      >
+        <thead class="bg-blue-700 text-white">
+          <tr>
+            <th class="py-2 px-4 text-center">Hora</th>
+            <th class="py-2 px-4 text-center">Actividad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="bg-gray-100 text-black text-center">
             <td class="py-2 px-4">16:00</td>
             <td class="py-2 px-4"
               >Primer acercamiento del alumnado a las empresas. Visita a stands
@@ -272,7 +272,7 @@
     </h1>
 
     <!-- Sección 1 -->
-    <div class="mb-6">
+    <div class="mb-6 overflow-auto content">
       <h2 class="text-2xl font-semibold text-gray-700 mb-3">
         Conoce las Empresas Tecnológicas:
       </h2>
@@ -295,28 +295,28 @@
   class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-10 hidden"
   onclick="closeModal('horarioModalComercioMarketing')"
 >
-<div
-  class="bg-white rounded-lg overflow-hidden shadow-2xl max-w-4xl w-full mx-4 p-6"
->
-  <div class="bg-blue-700 text-white p-4 flex justify-between items-center">
-    <h2 class="text-2xl font-extrabold">Horario del dia 3</h2>
-    <button
-      class="text-white text-3xl font-bold hover:text-red-400 transition duration-300"
-      onclick="closeModal('horarioModal')">&times;</button
-    >
-  </div>
-  <div class="overflow-x-auto mt-4 max-h-96 overflow-y-auto">
-    <table
-      class="min-w-full bg-white border border-gray-300 rounded-lg shadow-lg"
-    >
-      <thead class="bg-blue-700 text-white">
-        <tr>
-          <th class="py-2 px-4 text-center">Hora</th>
-          <th class="py-2 px-4 text-center">Actividad</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="bg-gray-100 text-black text-center">
+  <div
+    class="bg-white rounded-lg overflow-hidden shadow-2xl max-w-4xl w-full mx-4 p-6"
+  >
+    <div class="bg-blue-700 text-white p-4 flex justify-between items-center">
+      <h2 class="text-2xl font-extrabold">Horario del dia 3</h2>
+      <button
+        class="text-white text-3xl font-bold hover:text-red-400 transition duration-300"
+        onclick="closeModal('horarioModal')">&times;</button
+      >
+    </div>
+    <div class="overflow-x-auto mt-4 max-h-96 overflow-y-auto">
+      <table
+        class="min-w-full bg-white border border-gray-300 rounded-lg shadow-lg"
+      >
+        <thead class="bg-blue-700 text-white">
+          <tr>
+            <th class="py-2 px-4 text-center">Hora</th>
+            <th class="py-2 px-4 text-center">Actividad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="bg-gray-100 text-black text-center">
             <td class="py-2 px-4">16:00</td>
             <td class="py-2 px-4"
               >Primer acercamiento del alumnado a las empresas. Visita a stands
@@ -351,7 +351,7 @@
     </h1>
 
     <!-- Sección 1 -->
-    <div class="mb-6">
+    <div class="mb-6 overflow-auto content">
       <h2 class="text-2xl font-semibold text-gray-700 mb-3">
         Conoce las Empresas Tecnológicas:
       </h2>
@@ -502,52 +502,55 @@
     <h1 class="text-3xl font-extrabold text-center text-blue-600 mb-6">
       Actividades Principales
     </h1>
+    <div class="overflow-auto content">
+      <!-- Sección 1 -->
+      <div class="mb-6">
+        <h2 class="text-2xl font-semibold text-gray-700 mb-3">
+          Conoce las Empresas Tecnológicas:
+        </h2>
+        <ul class="list-disc list-inside text-gray-600 space-y-2">
+          <li>
+            <strong>Exhibición de Empresas:</strong> Conoce productos y servicios
+            innovadores.
+          </li>
+          <li>
+            <strong>Networking:</strong> Intercambia ideas con empresarios y profesionales.
+          </li>
+        </ul>
+      </div>
 
-    <!-- Sección 1 -->
-    <div class="mb-6">
-      <h2 class="text-2xl font-semibold text-gray-700 mb-3">
-        Conoce las Empresas Tecnológicas:
-      </h2>
-      <ul class="list-disc list-inside text-gray-600 space-y-2">
-        <li>
-          <strong>Exhibición de Empresas:</strong> Conoce productos y servicios innovadores.
-        </li>
-        <li>
-          <strong>Networking:</strong> Intercambia ideas con empresarios y profesionales.
-        </li>
-      </ul>
-    </div>
+      <!-- Sección 2 -->
+      <div class="mb-6">
+        <h2 class="text-2xl font-semibold text-gray-700 mb-3">
+          Tendencias en el Mercado:
+        </h2>
+        <ul class="list-disc list-inside text-gray-600 space-y-2">
+          <li>
+            <strong>Charlas:</strong> Descubre las tecnologías emergentes más demandadas.
+          </li>
+          <li>
+            <strong>Talleres Prácticos:</strong> Participa y aprende sobre IA, ciberseguridad,
+            y más.
+          </li>
+        </ul>
+      </div>
 
-    <!-- Sección 2 -->
-    <div class="mb-6">
-      <h2 class="text-2xl font-semibold text-gray-700 mb-3">
-        Tendencias en el Mercado:
-      </h2>
-      <ul class="list-disc list-inside text-gray-600 space-y-2">
-        <li>
-          <strong>Charlas:</strong> Descubre las tecnologías emergentes más demandadas.
-        </li>
-        <li>
-          <strong>Talleres Prácticos:</strong> Participa y aprende sobre IA, ciberseguridad,
-          y más.
-        </li>
-      </ul>
-    </div>
-
-    <!-- Sección 3 -->
-    <div class="mb-6">
-      <h2 class="text-2xl font-semibold text-gray-700 mb-3">
-        Acceso a Ofertas Exclusivas:
-      </h2>
-      <ul class="list-disc list-inside text-gray-600 space-y-2">
-        <li>
-          <strong>Bolsa de Trabajo:</strong> Encuentra oportunidades laborales únicas.
-        </li>
-        <li>
-          <strong>Sesiones de Reclutamiento:</strong> Participa en entrevistas y
-          selecciones.
-        </li>
-      </ul>
+      <!-- Sección 3 -->
+      <div class="mb-6">
+        <h2 class="text-2xl font-semibold text-gray-700 mb-3">
+          Acceso a Ofertas Exclusivas:
+        </h2>
+        <ul class="list-disc list-inside text-gray-600 space-y-2">
+          <li>
+            <strong>Bolsa de Trabajo:</strong> Encuentra oportunidades laborales
+            únicas.
+          </li>
+          <li>
+            <strong>Sesiones de Reclutamiento:</strong> Participa en entrevistas
+            y selecciones.
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
@@ -559,28 +562,28 @@
   class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-10 hidden"
   onclick="closeModal('horarioModalEsoBachillerato')"
 >
-<div
-  class="bg-white rounded-lg overflow-hidden shadow-2xl max-w-4xl w-full mx-4 p-6"
->
-  <div class="bg-blue-700 text-white p-4 flex justify-between items-center">
-    <h2 class="text-2xl font-extrabold">Horario del dia 3</h2>
-    <button
-      class="text-white text-3xl font-bold hover:text-red-400 transition duration-300"
-      onclick="closeModal('horarioModal')">&times;</button
-    >
-  </div>
-  <div class="overflow-x-auto mt-4 max-h-96 overflow-y-auto">
-    <table
-      class="min-w-full bg-white border border-gray-300 rounded-lg shadow-lg"
-    >
-      <thead class="bg-blue-700 text-white">
-        <tr>
-          <th class="py-2 px-4 text-center">Hora</th>
-          <th class="py-2 px-4 text-center">Actividad</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="bg-gray-100 text-black text-center">
+  <div
+    class="bg-white rounded-lg overflow-hidden shadow-2xl max-w-4xl w-full mx-4 p-6"
+  >
+    <div class="bg-blue-700 text-white p-4 flex justify-between items-center">
+      <h2 class="text-2xl font-extrabold">Horario del dia 3</h2>
+      <button
+        class="text-white text-3xl font-bold hover:text-red-400 transition duration-300"
+        onclick="closeModal('horarioModal')">&times;</button
+      >
+    </div>
+    <div class="overflow-x-auto mt-4 max-h-96 overflow-y-auto">
+      <table
+        class="min-w-full bg-white border border-gray-300 rounded-lg shadow-lg"
+      >
+        <thead class="bg-blue-700 text-white">
+          <tr>
+            <th class="py-2 px-4 text-center">Hora</th>
+            <th class="py-2 px-4 text-center">Actividad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="bg-gray-100 text-black text-center">
             <td class="py-2 px-4">16:00</td>
             <td class="py-2 px-4"
               >Primer acercamiento del alumnado a las empresas. Visita a stands
@@ -615,7 +618,7 @@
     </h1>
 
     <!-- Sección 1 -->
-    <div class="mb-6">
+    <div class="mb-6 overflow-auto content">
       <h2 class="text-2xl font-semibold text-gray-700 mb-3">
         Conoce las Empresas Tecnológicas:
       </h2>
@@ -1039,6 +1042,9 @@
 
     .img-container {
       display: none;
+    }
+    .content {
+      height: 400px;
     }
   }
 </style>
