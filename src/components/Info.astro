@@ -50,8 +50,15 @@
         </div>
         <!-- Buttons -->
         <div class="flex gap-4 mt-4 justify-end">
-          <button class="py-2 px-4 bg-[#008000] text-white rounded" onclick="openModal('horarioModal')">Horario</button>
-          <button class="py-2 px-4 bg-[#008000] text-white rounded" onclick="openModal('detallesModal')">Ver detalles</button>
+          <button
+            class="py-2 px-4 bg-[#008000] text-white rounded"
+            onclick="openModal('horarioModalEsoBachillerato')">Horario</button
+          >
+          <button
+            class="py-2 px-4 bg-[#008000] text-white rounded"
+            onclick="openModal('detallesModalEsoBachillerato')"
+            >Ver detalles</button
+          >
         </div>
       </div>
     </div>
@@ -90,8 +97,15 @@
         </div>
         <!-- Buttons -->
         <div class="flex gap-4 mt-4">
-          <button class="py-2 px-4 bg-[#0000FF] text-white rounded" onclick="openModal('horarioModal')">Horario</button>
-          <button class="py-2 px-4 bg-[#0000FF] text-white rounded" onclick="openModal('detallesModal')">Ver detalles</button>
+          <button
+            class="py-2 px-4 bg-[#0000FF] text-white rounded"
+            onclick="openModal('horarioModalComercioMarketing')">Horario</button
+          >
+          <button
+            class="py-2 px-4 bg-[#0000FF] text-white rounded"
+            onclick="openModal('detallesModalComercioMarketing')"
+            >Ver detalles</button
+          >
         </div>
       </div>
       <div class="img-container">
@@ -129,8 +143,14 @@
         </div>
         <!-- Buttons -->
         <div class="flex gap-4 mt-4 justify-end">
-          <button class="py-2 px-4 bg-red-600 text-white rounded" onclick="openModal('horarioModal')">Horario</button>
-          <button class="py-2 px-4 bg-red-600 text-white rounded" onclick="openModal('detallesModal')">Ver detalles</button>
+          <button
+            class="py-2 px-4 bg-red-600 text-white rounded"
+            onclick="openModal('horarioModalInformatica')">Horario</button
+          >
+          <button
+            class="py-2 px-4 bg-red-600 text-white rounded"
+            onclick="openModal('detallesModalInformatica')">Ver detalles</button
+          >
         </div>
       </div>
     </div>
@@ -167,8 +187,15 @@
         </div>
         <!-- Buttons -->
         <div class="flex gap-4 mt-4">
-          <button class="py-2 px-4 bg-[#800080] text-white rounded" onclick="openModal('horarioModal')">Horario</button>
-          <button class="py-2 px-4 bg-[#800080] text-white rounded" onclick="openModal('detallesModal')">Ver detalles</button>
+          <button
+            class="py-2 px-4 bg-[#800080] text-white rounded"
+            onclick="openModal('horarioModalEsoBachillerato')">Horario</button
+          >
+          <button
+            class="py-2 px-4 bg-[#800080] text-white rounded"
+            onclick="openModal('detallesModalEsoBachillerato')"
+            >Ver detalles</button
+          >
         </div>
       </div>
       <div class="img-container">
@@ -182,18 +209,175 @@
   </div>
 </div>
 
-<!-- Modals -->
+<!-- Modal Administracion y Gestion -->
+
 <div
-  id="horarioModal"
-  class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-50 hidden z-10"
-  onclick="closeModal('horarioModal')"
+  id="horarioModalAdministracionGestion"
+  class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-10 hidden"
+  onclick="closeModal('horarioModalAdministracionGestion')"
+>
+<div
+  class="bg-white rounded-lg overflow-hidden shadow-2xl max-w-4xl w-full mx-4 p-6"
+>
+  <div class="bg-blue-700 text-white p-4 flex justify-between items-center">
+    <h2 class="text-2xl font-extrabold">Horario del dia 3</h2>
+    <button
+      class="text-white text-3xl font-bold hover:text-red-400 transition duration-300"
+      onclick="closeModal('horarioModal')">&times;</button
+    >
+  </div>
+  <div class="overflow-x-auto mt-4 max-h-96 overflow-y-auto">
+    <table
+      class="min-w-full bg-white border border-gray-300 rounded-lg shadow-lg"
+    >
+      <thead class="bg-blue-700 text-white">
+        <tr>
+          <th class="py-2 px-4 text-center">Hora</th>
+          <th class="py-2 px-4 text-center">Actividad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bg-gray-100 text-black text-center">
+            <td class="py-2 px-4">16:00</td>
+            <td class="py-2 px-4"
+              >Primer acercamiento del alumnado a las empresas. Visita a stands
+              de empresas con información sobre proyectos, tecnologías, etc.</td
+            >
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div
+  id="detallesModalAdministracionGestion"
+  class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden z-10"
+  onclick="closeModal('detallesModalAdministracionGestion')"
+>
+  <div
+    class="modal-enter bg-white text-gray-800 rounded-2xl shadow-2xl w-11/12 max-w-3xl p-8 relative"
+  >
+    <!-- Botón de cierre -->
+    <button
+      onclick="closeModal('detallesModalAdministracionGestion')"
+      class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-3xl font-bold"
+    >
+      &times;
+    </button>
+
+    <!-- Título principal -->
+    <h1 class="text-3xl font-extrabold text-center text-blue-600 mb-6">
+      Actividades Principales
+    </h1>
+
+    <!-- Sección 1 -->
+    <div class="mb-6">
+      <h2 class="text-2xl font-semibold text-gray-700 mb-3">
+        Conoce las Empresas Tecnológicas:
+      </h2>
+      <ul class="list-disc list-inside text-gray-600 space-y-2">
+        <li>
+          <strong>Exhibición de Empresas:</strong> Conoce productos y servicios innovadores.
+        </li>
+        <li>
+          <strong>Networking:</strong> Intercambia ideas con empresarios y profesionales.
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Comercio y Marketing -->
+
+<div
+  id="horarioModalComercioMarketing"
+  class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-10 hidden"
+  onclick="closeModal('horarioModalComercioMarketing')"
+>
+<div
+  class="bg-white rounded-lg overflow-hidden shadow-2xl max-w-4xl w-full mx-4 p-6"
+>
+  <div class="bg-blue-700 text-white p-4 flex justify-between items-center">
+    <h2 class="text-2xl font-extrabold">Horario del dia 3</h2>
+    <button
+      class="text-white text-3xl font-bold hover:text-red-400 transition duration-300"
+      onclick="closeModal('horarioModal')">&times;</button
+    >
+  </div>
+  <div class="overflow-x-auto mt-4 max-h-96 overflow-y-auto">
+    <table
+      class="min-w-full bg-white border border-gray-300 rounded-lg shadow-lg"
+    >
+      <thead class="bg-blue-700 text-white">
+        <tr>
+          <th class="py-2 px-4 text-center">Hora</th>
+          <th class="py-2 px-4 text-center">Actividad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bg-gray-100 text-black text-center">
+            <td class="py-2 px-4">16:00</td>
+            <td class="py-2 px-4"
+              >Primer acercamiento del alumnado a las empresas. Visita a stands
+              de empresas con información sobre proyectos, tecnologías, etc.</td
+            >
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div
+  id="detallesModalComercioMarketing"
+  class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden z-10"
+  onclick="closeModal('detallesModalComercioMarketing')"
+>
+  <div
+    class="modal-enter bg-white text-gray-800 rounded-2xl shadow-2xl w-11/12 max-w-3xl p-8 relative"
+  >
+    <!-- Botón de cierre -->
+    <button
+      onclick="closeModal('detallesModalComercioMarketing')"
+      class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-3xl font-bold"
+    >
+      &times;
+    </button>
+
+    <!-- Título principal -->
+    <h1 class="text-3xl font-extrabold text-center text-blue-600 mb-6">
+      Actividades Principales
+    </h1>
+
+    <!-- Sección 1 -->
+    <div class="mb-6">
+      <h2 class="text-2xl font-semibold text-gray-700 mb-3">
+        Conoce las Empresas Tecnológicas:
+      </h2>
+      <ul class="list-disc list-inside text-gray-600 space-y-2">
+        <li>
+          <strong>Exhibición de Empresas:</strong> Conoce productos y servicios innovadores.
+        </li>
+        <li>
+          <strong>Networking:</strong> Intercambia ideas con empresarios y profesionales.
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Informatica -->
+
+<div
+  id="horarioModalInformatica"
+  class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-50 hidden"
+  onclick="closeModal('horarioModalInformatica')"
 >
   <div
     class="bg-white rounded-lg overflow-hidden shadow-2xl max-w-4xl w-full mx-4 p-6"
   >
-    <div
-    class="bg-blue-700 text-white p-4 flex justify-between items-center"
-    >
+    <div class="bg-blue-700 text-white p-4 flex justify-between items-center">
       <h2 class="text-2xl font-extrabold">Horario del dia 3</h2>
       <button
         class="text-white text-3xl font-bold hover:text-red-400 transition duration-300"
@@ -204,8 +388,8 @@
       <table
         class="min-w-full bg-white border border-gray-300 rounded-lg shadow-lg"
       >
-      <thead class="bg-blue-700 text-white">
-        <tr>
+        <thead class="bg-blue-700 text-white">
+          <tr>
             <th class="py-2 px-4 text-center">Hora</th>
             <th class="py-2 px-4 text-center">Actividad</th>
           </tr>
@@ -298,18 +482,17 @@
     </div>
   </div>
 </div>
-
 <div
-  id="detallesModal"
+  id="detallesModalInformatica"
   class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden z-10"
-  onclick="closeModal('detallesModal')"
+  onclick="closeModal('detallesModalInformatica')"
 >
   <div
     class="modal-enter bg-white text-gray-800 rounded-2xl shadow-2xl w-11/12 max-w-3xl p-8 relative"
   >
     <!-- Botón de cierre -->
     <button
-      onclick="closeModal('detallesModal')"
+      onclick="closeModal('detallesModalInformatica')"
       class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-3xl font-bold"
     >
       &times;
@@ -366,7 +549,85 @@
         </li>
       </ul>
     </div>
+  </div>
+</div>
 
+<!-- Modal ESOBachillerato -->
+
+<div
+  id="horarioModalEsoBachillerato"
+  class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-10 hidden"
+  onclick="closeModal('horarioModalEsoBachillerato')"
+>
+<div
+  class="bg-white rounded-lg overflow-hidden shadow-2xl max-w-4xl w-full mx-4 p-6"
+>
+  <div class="bg-blue-700 text-white p-4 flex justify-between items-center">
+    <h2 class="text-2xl font-extrabold">Horario del dia 3</h2>
+    <button
+      class="text-white text-3xl font-bold hover:text-red-400 transition duration-300"
+      onclick="closeModal('horarioModal')">&times;</button
+    >
+  </div>
+  <div class="overflow-x-auto mt-4 max-h-96 overflow-y-auto">
+    <table
+      class="min-w-full bg-white border border-gray-300 rounded-lg shadow-lg"
+    >
+      <thead class="bg-blue-700 text-white">
+        <tr>
+          <th class="py-2 px-4 text-center">Hora</th>
+          <th class="py-2 px-4 text-center">Actividad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bg-gray-100 text-black text-center">
+            <td class="py-2 px-4">16:00</td>
+            <td class="py-2 px-4"
+              >Primer acercamiento del alumnado a las empresas. Visita a stands
+              de empresas con información sobre proyectos, tecnologías, etc.</td
+            >
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div
+  id="detallesModalEsoBachillerato"
+  class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden z-10"
+  onclick="closeModal('detallesModalEsoBachillerato')"
+>
+  <div
+    class="modal-enter bg-white text-gray-800 rounded-2xl shadow-2xl w-11/12 max-w-3xl p-8 relative"
+  >
+    <!-- Botón de cierre -->
+    <button
+      onclick="closeModal('detallesModalEsoBachillerato')"
+      class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-3xl font-bold"
+    >
+      &times;
+    </button>
+
+    <!-- Título principal -->
+    <h1 class="text-3xl font-extrabold text-center text-blue-600 mb-6">
+      Actividades Principales
+    </h1>
+
+    <!-- Sección 1 -->
+    <div class="mb-6">
+      <h2 class="text-2xl font-semibold text-gray-700 mb-3">
+        Conoce las Empresas Tecnológicas:
+      </h2>
+      <ul class="list-disc list-inside text-gray-600 space-y-2">
+        <li>
+          <strong>Exhibición de Empresas:</strong> Conoce productos y servicios innovadores.
+        </li>
+        <li>
+          <strong>Networking:</strong> Intercambia ideas con empresarios y profesionales.
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
 
@@ -835,7 +1096,7 @@
     },
     {
       threshold: 0.1, // Dispara la animación cuando una pequeña parte de la tarjeta es visible
-    },
+    }
   );
 
   // Preparar las tarjetas antes de observarlas
@@ -883,7 +1144,7 @@
     },
     {
       threshold: 0.5, // Dispara la animación cuando el 50% del contenedor sea visible
-    },
+    }
   );
 
   // Iniciar la observación del contenedor
