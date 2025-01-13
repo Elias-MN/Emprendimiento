@@ -2,24 +2,25 @@
   <h1 class="font-bold text-secondary-color p-10 text-xl tablet:text-2xl computer:text-4xl">COLABORADORES</h1>
 
   <div class="parent">
-    <div class="div1 first block bg-white-color">
-      <img src="images/companies/ilkeBenson.png" alt="" />
+
+    <div class="div5 third block bg-white-color">
+      <img src="images/companies/Inquiba.webp" alt="" />
       <div class="companies-name">
-        <span class="bg-black-color text-accent-color">Ilke Benson</span>
+        <span class="bg-black-color text-accent-color">Inquiba</span>
       </div>
     </div>
 
     <div class="div2 second block bg-white-color">
-      <img src="images/companies/fpProfesional.png" alt="" />
+      <img src="images/companies/logi_rail.webp" alt="" />
       <div class="companies-name">
-        <span class="bg-black-color text-accent-color">fp Profesional</span>
+        <span class="bg-black-color text-accent-color">Logirail</span>
       </div>
     </div>
 
     <div class="div3 third block bg-white-color">
-      <img src="images/companies/femec.png" alt="" />
+      <img src="images/companies/oesia.webp" alt="" />
       <div class="companies-name">
-        <span class="bg-black-color text-accent-color">femec</span>
+        <span class="bg-black-color text-accent-color">Grupo Oesía</span>
       </div>
     </div>
 
@@ -30,10 +31,10 @@
       </div>
     </div>
 
-    <div class="div5 third block bg-white-color">
-      <img src="images/companies/porsche.png" alt="" />
+    <div class="div1 first block bg-white-color">
+      <img src="images/companies/ilkeBenson.png" alt="" />
       <div class="companies-name">
-        <span class="bg-black-color text-accent-color">Porsche</span>
+        <span class="bg-black-color text-accent-color">Ilke Benson</span>
       </div>
     </div>
 
@@ -95,7 +96,7 @@
     justify-content: center;
   }
 
-  .first {
+  .first, .second, .third{
     position: relative;
     width: 250px;
     height: 200px;
@@ -105,30 +106,14 @@
     transform: translateY(20px);
     animation: first 3.5s ease-in-out 2s forwards;
     animation-timeline: view();
+  }
+  .first {
     animation-range: entry 0% cover 20%;
   }
   .second {
-    position: relative;
-    width: 250px;
-    height: 200px;
-    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.6);
-    border-radius: 8%;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: first 3.5s ease-in-out 2s forwards;
-    animation-timeline: view();
     animation-range: entry 0% cover 30%;
   }
   .third {
-    position: relative;
-    width: 250px;
-    height: 200px;
-    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.6);
-    border-radius: 8%;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: first 3.5s ease-in-out 2s forwards;
-    animation-timeline: view();
     animation-range: entry 0% cover 40%;
   }
 
@@ -193,8 +178,8 @@
     .first,
     .second,
     .third {
-      width: 312px;
-      height: 150px;
+      /* width: 312px;
+      height: 150px; */
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       display: flex;
