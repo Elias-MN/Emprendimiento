@@ -1,6 +1,8 @@
 <div id="info" class="bg-white info-container">
-    <div class="title-container">
-        <h1 class="animated-title font-bold text-secondary-color">Familias profesionales</h1>
+  <div class="title-container">
+    <h1 class="animated-title font-bold text-secondary-color">
+      Familias profesionales
+    </h1>
   </div>
   <div id="cards">
     <div id="card" class="bg-primary-color green block">
@@ -48,18 +50,8 @@
         </div>
         <!-- Buttons -->
         <div class="flex gap-4 mt-4 justify-end">
-          <button
-            class="py-2 px-4 bg-black-color text-accent-color rounded"
-            onclick="openModal('horarioModal')"
-          >
-            Horario
-          </button>
-          <button
-            class="py-2 px-4 bg-black-color text-accent-color rounded"
-            onclick="openModal('detallesModal')"
-          >
-            Ver detalles
-          </button>
+          <button class="py-2 px-4 bg-[#008000] text-white rounded" onclick="openModal('horarioModal')">Horario</button>
+          <button class="py-2 px-4 bg-[#008000] text-white rounded" onclick="openModal('detallesModal')">Ver detalles</button>
         </div>
       </div>
     </div>
@@ -98,18 +90,8 @@
         </div>
         <!-- Buttons -->
         <div class="flex gap-4 mt-4">
-          <button
-            class="py-2 px-4 bg-black-color text-accent-color rounded"
-            onclick="openModal('horarioModal')"
-          >
-            Horario
-          </button>
-          <button
-            class="py-2 px-4 bg-black-color text-accent-color rounded"
-            onclick="openModal('detallesModal')"
-          >
-            Ver detalles
-          </button>
+          <button class="py-2 px-4 bg-[#0000FF] text-white rounded" onclick="openModal('horarioModal')">Horario</button>
+          <button class="py-2 px-4 bg-[#0000FF] text-white rounded" onclick="openModal('detallesModal')">Ver detalles</button>
         </div>
       </div>
       <div class="img-container">
@@ -147,18 +129,8 @@
         </div>
         <!-- Buttons -->
         <div class="flex gap-4 mt-4 justify-end">
-          <button
-            class="py-2 px-4 bg-black-color text-accent-color rounded"
-            onclick="openModal('horarioModal')"
-          >
-            Horario
-          </button>
-          <button
-            class="py-2 px-4 bg-black-color text-accent-color rounded"
-            onclick="openModal('detallesModal')"
-          >
-            Ver detalles
-          </button>
+          <button class="py-2 px-4 bg-red-600 text-white rounded" onclick="openModal('horarioModal')">Horario</button>
+          <button class="py-2 px-4 bg-red-600 text-white rounded" onclick="openModal('detallesModal')">Ver detalles</button>
         </div>
       </div>
     </div>
@@ -195,18 +167,8 @@
         </div>
         <!-- Buttons -->
         <div class="flex gap-4 mt-4">
-          <button
-            class="py-2 px-4 bg-black-color text-accent-color rounded"
-            onclick="openModal('horarioModal')"
-          >
-            Horario
-          </button>
-          <button
-            class="py-2 px-4 bg-black-color text-accent-color rounded"
-            onclick="openModal('detallesModal')"
-          >
-            Ver detalles
-          </button>
+          <button class="py-2 px-4 bg-[#800080] text-white rounded" onclick="openModal('horarioModal')">Horario</button>
+          <button class="py-2 px-4 bg-[#800080] text-white rounded" onclick="openModal('detallesModal')">Ver detalles</button>
         </div>
       </div>
       <div class="img-container">
@@ -223,14 +185,14 @@
 <!-- Modals -->
 <div
   id="horarioModal"
-  class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-50 hidden"
+  class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-50 hidden z-10"
   onclick="closeModal('horarioModal')"
 >
   <div
     class="bg-white rounded-lg overflow-hidden shadow-2xl max-w-4xl w-full mx-4 p-6"
   >
     <div
-      class="bg-gradient-to-r from-red-900 to-red-600 text-white p-4 flex justify-between items-center"
+    class="bg-blue-700 text-white p-4 flex justify-between items-center"
     >
       <h2 class="text-2xl font-extrabold">Horario del dia 3</h2>
       <button
@@ -242,10 +204,10 @@
       <table
         class="min-w-full bg-white border border-gray-300 rounded-lg shadow-lg"
       >
-        <thead class="bg-gradient-to-r from-red-900 to-red-600 text-white">
-          <tr>
-            <th class="py-2 px-4 text-left">Hora</th>
-            <th class="py-2 px-4 text-left">Actividad</th>
+      <thead class="bg-blue-700 text-white">
+        <tr>
+            <th class="py-2 px-4 text-center">Hora</th>
+            <th class="py-2 px-4 text-center">Actividad</th>
           </tr>
         </thead>
         <tbody>
@@ -339,7 +301,7 @@
 
 <div
   id="detallesModal"
-  class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden"
+  class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden z-10"
   onclick="closeModal('detallesModal')"
 >
   <div
@@ -405,10 +367,6 @@
       </ul>
     </div>
 
-    <!-- Beneficios -->
-    <div class="bg-blue-100 rounded-lg p-4 text-blue-800 text-lg">
-      <strong>Beneficios:</strong> Conocimiento, empleo, contactos, e inspiración.
-    </div>
   </div>
 </div>
 
