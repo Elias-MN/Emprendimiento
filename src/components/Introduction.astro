@@ -5,11 +5,14 @@
 <div class="introduction-container border-solid accent-accent-color">
   <div class="introduction-card delay-[300ms] duration-[600ms] taos:translate-y-[100%] taos:opacity-0">
     <div class="image-container">
-      <img 
-        src="images/info/circuloODS.webp" 
+      <img
+        src="images/info/circuloODS.webp"
         alt="Evento de emprendimiento"
         class="card-image">
     </div>
+
+    <div class="divisor h-px md:h-32 w-full md:w-px bg-gray-200" />
+
     <div class="info-text text-right">
       <p>
         La jornada del emprendimiento es una semana especial en el instituto Albarregas, donde los estudiantes pueden aprender sobre innovación y creatividad en los negocios a través de talleres y conferencias.</p>
@@ -17,14 +20,18 @@
   </div>
 
   <div class="introduction-card delay-[300ms] duration-[600ms] taos:translate-y-[100%] taos:opacity-0">
+
+    <div class="divisor h-px md:h-32 w-full md:w-px bg-gray-200" />
+
     <div class="info-text text-left">
       <p>
         Los estudiantes desarrollarán habilidades clave para convertirse en futuros emprendedores mediante actividades prácticas y trabajo en equipo.
       </p>
     </div>
+
     <div class="image-container">
-      <img 
-        src="images/header/logoAlbarregas.png" 
+      <img
+        src="images/header/logoAlbarregas.png"
         alt="Evento de emprendimiento"
         class="card-image">
     </div>
@@ -70,6 +77,10 @@
     height: 20vw;
   }
 
+  .divisor{
+    display: none;
+  }
+
   .info-text {
     width: 50%;
   }
@@ -82,6 +93,11 @@
   }
 
   @media (max-width: 768px) {
+
+    .divisor{
+      display: block;
+    }
+
     .introduction-card {
       flex-direction: column;
       height: auto;
