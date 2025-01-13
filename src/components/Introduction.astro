@@ -1,25 +1,131 @@
-<div class="introduction-container border-solid accent-accent-color bg-white ">
-  <div class="introduction-card delay-[300ms] duration-[600ms] taos:translate-y-[100%] taos:opacity-0 bg-white my-4" data-taos-offset="-300">
-    <h1 class="font-bold my-0.5 text-secondary-color text-xl tablet:text-2xl computer:text-5xl ">¿QUÉ ES LA JORNADA DE EMPRENDIMIENTO?</h1>
-    <p class="text-black-color text-base tablet:text-lg computer:text-2xl">La jornada del emprendimiento es una semana especial en el instituto Albarregas.
-      Dónde se estrechará el vínculo de las empresas con el alumnado del centro mediante charlas, información mano a mano, experiencias y mucho más.
-    </p>
+<h1 class="title-info font-bold my-0.5 text-secondary-color text-xl tablet:text-2xl computer:text-5xl text-center">
+  ¿QUÉ ES LA JORNADA DE EMPRENDIMIENTO?
+</h1>
+
+<div class="introduction-container border-solid accent-accent-color">
+  <div class="introduction-card delay-[300ms] duration-[600ms] taos:translate-y-[100%] taos:opacity-0">
+    <div class="image-container">
+      <img 
+        src="images/info/circuloODS.webp" 
+        alt="Evento de emprendimiento"
+        class="card-image">
+    </div>
+    <div class="info-text text-right">
+      <p>
+        La jornada del emprendimiento es una semana especial en el instituto Albarregas, donde los estudiantes pueden aprender sobre innovación y creatividad en los negocios a través de talleres y conferencias.</p>
+    </div>
+  </div>
+
+  <div class="introduction-card delay-[300ms] duration-[600ms] taos:translate-y-[100%] taos:opacity-0">
+    <div class="info-text text-left">
+      <p>
+        Los estudiantes desarrollarán habilidades clave para convertirse en futuros emprendedores mediante actividades prácticas y trabajo en equipo.
+      </p>
+    </div>
+    <div class="image-container">
+      <img 
+        src="images/header/logoAlbarregas.png" 
+        alt="Evento de emprendimiento"
+        class="card-image">
+    </div>
   </div>
 </div>
 
 <style>
+  .title-info {
+    margin-top: 12vh;
+  }
 
-.introduction-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  .introduction-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4vw;
+  }
 
-.introduction-card {
-  padding: 20px;
-  border-radius: 10px;
-  width: 80%;
-  text-align: center;
-}
 
+  .introduction-card {
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    margin-bottom: 16px;
+    gap: 20px;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    height: 25vw;
+  }
+
+  .image-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .card-image {
+    width: 100%;
+    object-fit: contain;
+    height: 20vw;
+  }
+
+  .info-text {
+    width: 50%;
+  }
+
+  .info-text p {
+    text-align: inherit;
+    color: black;
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .introduction-card {
+      flex-direction: column;
+      height: auto;
+      padding: 1rem;
+      min-height: min-content;
+      gap: 1rem;
+    }
+
+    .introduction-container {
+      margin-top: 2rem;
+    }
+
+    .image-container,
+    .info-text {
+      width: 100%;
+    }
+
+    .card-image {
+      height: auto;
+      max-width: 250px;
+      width: 80%;
+    }
+
+    .info-text p {
+      text-align: center;
+      font-size: 1rem;
+      padding: 0.5rem;
+    }
+
+    .introduction-card .image-container {
+      order: -1;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .info-text p {
+      font-size: 1.125rem;
+    }
+  }
+
+  @media (min-width: 1025px) {
+    .info-text p {
+      font-size: 1.5rem;
+    }
+  }
 </style>
