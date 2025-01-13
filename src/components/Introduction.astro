@@ -1,20 +1,55 @@
-<div class="introduction-container border-solid accent-accent-color bg-white ">
+<h1 class="title-info font-bold my-0.5 text-secondary-color text-xl tablet:text-2xl computer:text-5xl text-center">
+  ¿QUÉ ES LA JORNADA DE EMPRENDIMIENTO?
+</h1>
+
+<div class="introduction-container border-solid accent-accent-color">
   <div class="introduction-card delay-[300ms] duration-[600ms] taos:translate-y-[100%] taos:opacity-0 bg-white my-4" data-taos-offset="-300">
+<<<<<<< Updated upstream
     <h1 class="font-bold text-secondary-color text-xl tablet:text-2xl computer:text-4xl ">¿QUÉ ES LA JORNADA DE EMPRENDIMIENTO?</h1>
     <p class="text-black-color text-base tablet:text-lg computer:text-xl">La jornada del emprendimiento es una semana especial en el instituto Albarregas.
       Dónde se estrechará el vínculo de las empresas con el alumnado del centro mediante charlas, información mano a mano, experiencias y mucho más.
     </p>
+=======
+    <div>
+      <img 
+        src="images/info/circuloODS.webp" 
+        alt="Evento de emprendimiento">
+    </div>
+    <div class="info-card text-black-color text-base tablet:text-lg computer:text-2xl">
+      <p>
+        La jornada del emprendimiento es una semana especial en el instituto Albarregas, donde los estudiantes pueden aprender sobre innovación y creatividad en los negocios a través de talleres y conferencias.      </p>
+    </div>
+  </div>
+
+  <div class="introduction-card delay-[300ms] duration-[600ms] taos:translate-y-[100%] taos:opacity-0 bg-white my-4" data-taos-offset="-300">
+    <div class="info-card2 text-black-color text-base tablet:text-lg computer:text-2xl">
+      <p>
+        Los estudiantes desarrollarán habilidades clave para convertirse en futuros emprendedores mediante actividades prácticas y trabajo en equipo.
+      </p>
+    </div>
+    <div class="image-container">
+      <img 
+        src="images/header/logoAlbarregas.png" 
+        alt="Evento de emprendimiento">
+    </div>
+>>>>>>> Stashed changes
   </div>
 </div>
 
 <style>
+  .title-info {
+    margin-top: 12vh;
+  }
 
-.introduction-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  .introduction-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+  }
 
+<<<<<<< Updated upstream
 .introduction-card {
   padding: 20px;
   border-radius: 10px;
@@ -22,5 +57,66 @@
   max-width: 800px;
   text-align: center;
 }
+=======
+  .introduction-card {
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    margin-bottom: 16px;
+  }
+>>>>>>> Stashed changes
 
+  img {
+    width: 100vh;
+  }
+
+  .info-card {
+    margin-left: 10px;
+  }
+
+  .info-card p {
+    text-align: right;
+    
+  }
+
+  .info-card2 {
+    margin-right: 10px;
+  }
+
+  .info-card2 p {
+    text-align: left;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (max-width: 640px) {
+    img{
+      width: 20vh;
+    }
+    .introduction-card {
+      flex-direction: column; /* Cambiar la dirección a columna en pantallas pequeñas */
+    }
+
+    .info-card, .info-card2 {
+      margin: 0;
+    }
+
+    .info-card p, .info-card2 p {
+      text-align: center;
+      margin-top: 4px;
+    }
+
+    /* Mover la imagen arriba en el segundo div */
+    .introduction-card .image-container {
+      order: -1; /* Coloca la imagen encima */
+    }
+  }
 </style>
