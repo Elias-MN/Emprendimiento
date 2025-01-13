@@ -3,28 +3,30 @@
 </h1>
 
 <div class="introduction-container border-solid accent-accent-color">
-  <div class="introduction-card delay-[300ms] duration-[600ms] taos:translate-y-[100%] taos:opacity-0 bg-white my-4" data-taos-offset="-300">
-    <div>
-      <img
-        src="images/info/circuloODS.webp"
-        alt="Evento de emprendimiento">
+  <div class="introduction-card delay-[300ms] duration-[600ms] taos:translate-y-[100%] taos:opacity-0">
+    <div class="image-container">
+      <img 
+        src="images/info/circuloODS.webp" 
+        alt="Evento de emprendimiento"
+        class="card-image" >
     </div>
-    <div class="info-card text-black-color text-base tablet:text-lg computer:text-2xl">
+    <div class="info-text text-right">
       <p>
         La jornada del emprendimiento es una semana especial en el instituto Albarregas, donde los estudiantes pueden aprender sobre innovación y creatividad en los negocios a través de talleres y conferencias.</p>
     </div>
   </div>
 
-  <div class="introduction-card delay-[300ms] duration-[600ms] taos:translate-y-[100%] taos:opacity-0 bg-white my-4" data-taos-offset="-300">
-    <div class="info-card2 text-black-color text-base tablet:text-lg computer:text-2xl">
+  <div class="introduction-card delay-[300ms] duration-[600ms] taos:translate-y-[100%] taos:opacity-0">
+    <div class="info-text text-left">
       <p>
         Los estudiantes desarrollarán habilidades clave para convertirse en futuros emprendedores mediante actividades prácticas y trabajo en equipo.
       </p>
     </div>
     <div class="image-container">
-      <img
-        src="images/header/logoAlbarregas.png"
-        alt="Evento de emprendimiento">
+      <img 
+        src="images/header/logoAlbarregas.png" 
+        alt="Evento de emprendimiento"
+        class="card-image">
     </div>
   </div>
 </div>
@@ -39,7 +41,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 12px;
+    margin-top: 4vw;
+    
   }
 
   .introduction-card {
@@ -47,59 +50,74 @@
     border-radius: 10px;
     width: 80%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
     background-color: #fff;
     margin-bottom: 16px;
-  }
-
-  img {
-    width: 100vh;
-  }
-
-  .info-card {
-    margin-left: 10px;
-  }
-
-  .info-card p {
-    text-align: right;
-
-  }
-
-  .info-card2 {
-    margin-right: 10px;
-  }
-
-  .info-card2 p {
-    text-align: left;
+    gap: 20px;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    height: 25vw;
+    
   }
 
   .image-container {
+    width: 50%;
     display: flex;
     justify-content: center;
   }
 
+  .card-image {
+    width: 100%;
+    object-fit: contain;
+    height: 20vw;
+    
+  }
+  .info-text {
+    width: 50%;
+  }
+
+  .info-text p {
+    text-align: inherit;
+    color: black;
+    font-size: 1rem;
+    margin: 0;
+    
+  }
+
   @media (max-width: 640px) {
-    img{
+    .introduction-card {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .image-container,
+    .info-text {
+      width: 100%;
+    }
+
+    .card-image {
       width: 20vh;
     }
-    .introduction-card {
-      flex-direction: column; /* Cambiar la dirección a columna en pantallas pequeñas */
-    }
 
-    .info-card, .info-card2 {
-      margin: 0;
-    }
-
-    .info-card p, .info-card2 p {
+    .info-text p {
       text-align: center;
-      margin-top: 4px;
+      font-size: 1rem;
     }
 
-    /* Mover la imagen arriba en el segundo div */
     .introduction-card .image-container {
-      order: -1; /* Coloca la imagen encima */
+      order: -1;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .info-text p {
+      font-size: 1.125rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .info-text p {
+      font-size: 1.5rem;
     }
   }
 </style>
