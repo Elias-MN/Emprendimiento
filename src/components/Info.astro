@@ -222,8 +222,8 @@
     <div class="bg-blue-700 text-white p-4 flex justify-between items-center">
       <h2 class="text-2xl font-extrabold">Horario del dia 3</h2>
       <button
+        onclick="closeModal('horarioModalAdministracionGestion')"
         class="text-white text-3xl font-bold hover:text-red-400 transition duration-300"
-        onclick="closeModal('horarioModal')">&times;</button
       >
     </div>
     <div class="overflow-x-auto mt-4 max-h-96 overflow-y-auto">
@@ -296,14 +296,17 @@
   onclick="closeModal('horarioModalComercioMarketing')"
 >
   <div
-    class="bg-white rounded-lg overflow-hidden shadow-2xl max-w-4xl w-full mx-4 p-6"
+    class="bg-white rounded-lg overflow-hidden shadow-2xl max-w-4xl w-full mx-4 p-6 relative"
   >
     <div class="bg-blue-700 text-white p-4 flex justify-between items-center">
       <h2 class="text-2xl font-extrabold">Horario del dia 3</h2>
+      <!-- Botón de cierre -->
       <button
-        class="text-white text-3xl font-bold hover:text-red-400 transition duration-300"
-        onclick="closeModal('horarioModal')">&times;</button
+        onclick="closeModal('horarioModalComercioMarketing')"
+        class="absolute top-8 right-10 text-white hover:text-gray-800 text-3xl font-bold"
       >
+        &times;
+      </button>
     </div>
     <div class="overflow-x-auto mt-4 max-h-96 overflow-y-auto">
       <table
@@ -373,14 +376,17 @@
   class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-50 hidden"
 >
   <div
-    class="bg-white rounded-lg overflow-hidden shadow-2xl max-w-4xl w-full mx-4 p-6"
+    class="bg-white rounded-lg overflow-hidden shadow-2xl max-w-4xl w-full mx-4 p-6 relative"
   >
     <div class="bg-blue-700 text-white p-4 flex justify-between items-center">
       <h2 class="text-2xl font-extrabold">Horario del dia 3</h2>
+      <!-- Botón de cierre -->
       <button
-        class="text-white text-3xl font-bold hover:text-red-400 transition duration-300"
-        onclick="closeModal('horarioModal')">&times;</button
+        onclick="closeModal('horarioModalInformatica')"
+        class="absolute top-8 right-10 text-white hover:text-gray-800 text-3xl font-bold"
       >
+        &times;
+      </button>
     </div>
     <div class="overflow-x-auto mt-4 max-h-96 overflow-y-auto">
       <table
@@ -559,14 +565,17 @@
   class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-10 hidden"
 >
   <div
-    class="bg-white rounded-lg overflow-hidden shadow-2xl max-w-4xl w-full mx-4 p-6"
+    class="bg-white rounded-lg overflow-hidden shadow-2xl max-w-4xl w-full mx-4 p-6 relative"
   >
     <div class="bg-blue-700 text-white p-4 flex justify-between items-center">
       <h2 class="text-2xl font-extrabold">Horario del dia 3</h2>
+      <!-- Botón de cierre -->
       <button
-        class="text-white text-3xl font-bold hover:text-red-400 transition duration-300"
-        onclick="closeModal('horarioModal')">&times;</button
+        onclick="closeModal('horarioModalEsoBachillerato')"
+        class="absolute top-8 right-10 text-white hover:text-gray-800 text-3xl font-bold"
       >
+        &times;
+      </button>
     </div>
     <div class="overflow-x-auto mt-4 max-h-96 overflow-y-auto">
       <table
