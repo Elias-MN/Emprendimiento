@@ -137,7 +137,7 @@
     height: 100%;
     border-radius: 8%;
     transition: none;
-    padding: 16px;
+    padding-bottom: 16px;
   }
 
   .companies-name span {
@@ -147,7 +147,7 @@
     width: 80%;
     border-radius: 6px;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 0.8em;
     padding: 4px;
     box-shadow: 3px 4px 9px black;
   }
@@ -186,7 +186,7 @@
       display: grid;
       grid-template-columns: 1fr;
       justify-items: center;
-      gap: 24px 0px;
+      gap: 4px 0px;
       padding: 10px 0;
     }
 
@@ -214,9 +214,13 @@
       height: 90%;
       object-fit: contain;
     }
+
+    .companies-name span{
+      width: 100%;
+    }
   }
 
-  @media screen and (min-width: 500px) and (max-width: 720px) {
+  @media screen and (min-width: 300px) and (max-width: 720px) {
     #companies {
       width: 100%;
     }
@@ -238,8 +242,8 @@
     .first,
     .second,
     .third {
-      width: 200px;
-      height: 150px;
+      width: 80%;
+      height: 100px;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       display: flex;
