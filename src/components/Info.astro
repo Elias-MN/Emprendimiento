@@ -5,6 +5,46 @@
     </h1>
   </div>
   <div id="cards">
+    <div id="card" class="bg-primary-color yellow block">
+      <div class="text-content">
+        <h3 class="wavy">
+          <span style="--i:1;">I</span>
+          <span style="--i:2;">n</span>
+          <span style="--i:3;">a</span>
+          <span style="--i:4;">g</span>
+          <span style="--i:5;">u</span>
+          <span style="--i:6;">r</span>
+          <span style="--i:7;">a</span>
+          <span style="--i:8;">c</span>
+          <span style="--i:9;">i</span>
+          <span style="--i:10;">ó</span>
+          <span style="--i:11;">n</span>
+        </h3>
+        <div class="p-container">
+          <p id="text">
+            Descubre oportunidades en la Jornada de Emprendimiento del I.E.S.
+            Albarregas. Un evento único donde empresas y alumnos se conectan
+            cara a cara para compartir ideas, explorar colaboraciones y abrir
+            puertas hacia un futuro profesional más cercano. ¡No te lo pierdas!
+          </p>
+        </div>
+        <!-- Buttons -->
+        <div class="flex gap-4 mt-4">
+          <button
+            class="py-2 px-4 bg-[#FDC01A] text-white rounded"
+            onclick="openModal('horarioModalInaguracion')">Horario</button
+          >
+        </div>
+      </div>
+      <div class="img-container">
+        <img
+          id="yellowLight"
+          src="images/info/yellow.webp"
+          alt="Bombilla amarilla"
+        />
+      </div>
+    </div>
+
     <div id="card" class="bg-primary-color green block">
       <div class="img-container">
         <img
@@ -42,16 +82,21 @@
         </h3>
         <div class="p-container">
           <p id="text">
-            Descubre cómo las competencias en administración y gestión pueden marcar la diferencia en el mundo del emprendimiento. 
-            Durante esta jornada, exploraremos casos prácticos, herramientas innovadoras y estrategias clave que impulsan a los 
-            futuros gestores y administrativos a crear y liderar sus propios proyectos con éxito. ¡Es tu oportunidad para conectar teoría y práctica en el apasionante universo de los negocios!
+            Descubre cómo las competencias en administración y gestión pueden
+            marcar la diferencia en el mundo del emprendimiento. Durante esta
+            jornada, exploraremos casos prácticos, herramientas innovadoras y
+            estrategias clave que impulsan a los futuros gestores y
+            administrativos a crear y liderar sus propios proyectos con éxito.
+            ¡Es tu oportunidad para conectar teoría y práctica en el apasionante
+            universo de los negocios!
           </p>
         </div>
         <!-- Buttons -->
         <div class="flex gap-4 mt-4 justify-end">
           <button
             class="py-2 px-4 bg-[#008000] text-white rounded"
-            onclick="openModal('horarioModalAdministracionGestion')">Horario</button
+            onclick="openModal('horarioModalAdministracionGestion')"
+            >Horario</button
           >
         </div>
       </div>
@@ -83,7 +128,12 @@
         </h3>
         <div class="p-container">
           <p>
-            El comercio y el marketing son la columna vertebral de cualquier emprendimiento exitoso. En esta jornada, aprenderás a diseñar estrategias de venta efectivas, a utilizar las redes sociales para captar clientes y a analizar las tendencias del mercado para destacar en un entorno competitivo. Únete a nosotros y da el primer paso hacia tu futuro como emprendedor creativo e innovador.
+            El comercio y el marketing son la columna vertebral de cualquier
+            emprendimiento exitoso. En esta jornada, aprenderás a diseñar
+            estrategias de venta efectivas, a utilizar las redes sociales para
+            captar clientes y a analizar las tendencias del mercado para
+            destacar en un entorno competitivo. Únete a nosotros y da el primer
+            paso hacia tu futuro como emprendedor creativo e innovador.
           </p>
         </div>
         <!-- Buttons -->
@@ -92,7 +142,6 @@
             class="py-2 px-4 bg-[#0000FF] text-white rounded"
             onclick="openModal('horarioModalComercioMarketing')">Horario</button
           >
-          
         </div>
       </div>
       <div class="img-container">
@@ -134,10 +183,6 @@
             class="py-2 px-4 bg-red-600 text-white rounded"
             onclick="openModal('horarioModalInformatica')">Horario</button
           >
-          <button
-            class="py-2 px-4 bg-red-600 text-white rounded"
-            onclick="openModal('detallesModalInformatica')">Ver detalles</button
-          >
         </div>
       </div>
     </div>
@@ -165,20 +210,13 @@
           <span style="--i:18;">o</span>
         </h3>
         <div class="p-container">
-          <p>
-            "jiji hola "
-          </p>
+          <p>"jiji hola "</p>
         </div>
         <!-- Buttons -->
         <div class="flex gap-4 mt-4">
           <button
             class="py-2 px-4 bg-[#800080] text-white rounded"
             onclick="openModal('horarioModalEsoBachillerato')">Horario</button
-          >
-          <button
-            class="py-2 px-4 bg-[#800080] text-white rounded"
-            onclick="openModal('detallesModalEsoBachillerato')"
-            >Ver detalles</button
           >
         </div>
       </div>
@@ -193,6 +231,47 @@
   </div>
 </div>
 
+<div
+  id="horarioModalInaguracion"
+  class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-10 hidden"
+  onclick="closeModal('horarioModalInaguracion')"
+>
+  <div
+    class="bg-white rounded-lg overflow-hidden shadow-2xl max-w-4xl w-full mx-4 p-6"
+  >
+    <div class="bg-[#FDC01A] text-white p-4 flex justify-between items-center">
+      <h2 class="text-2xl font-extrabold">Horario del dia 3</h2>
+      <button
+        onclick="closeModal('horarioModalInaguracion')"
+        class="text-white text-3xl font-bold hover:text-red-400 transition duration-300"
+      >
+      </button>
+      <div class="overflow-x-auto mt-4 max-h-96 overflow-y-auto">
+        <table
+          class="min-w-full bg-white border border-gray-300 rounded-lg shadow-lg"
+        >
+          <thead class="bg-[#FDC01A] text-white">
+            <tr>
+              <th class="py-2 px-4 text-center">Hora</th>
+              <th class="py-2 px-4 text-center">Actividad</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-gray-100 text-black text-center">
+              <td class="py-2 px-4">16:00</td>
+              <td class="py-2 px-4"
+                >Primer acercamiento del alumnado a las empresas. Visita a
+                stands de empresas con información sobre proyectos, tecnologías,
+                etc.</td
+              >
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Modal Administracion y Gestion -->
 
 <div
@@ -202,7 +281,7 @@
 >
   <div
     class="bg-white rounded-lg overflow-hidden shadow-2xl max-w-4xl w-full mx-4 p-6"
-    onclick="event.stopPropagation()" 
+    onclick="event.stopPropagation()"
   >
     <!-- Encabezado del modal -->
     <div class="bg-[#008000] text-white p-4 flex justify-between items-center">
@@ -211,12 +290,12 @@
         onclick="closeModal('horarioModalAdministracionGestion')"
         class="text-white text-3xl font-bold hover:text-red-400 transition duration-300"
       >
-        &times;
       </button>
     </div>
-    <!-- Contenido del modal -->
     <div class="overflow-x-auto mt-4 max-h-96 overflow-y-auto">
-      <table class="min-w-full bg-white border border-gray-300 rounded-lg shadow-lg">
+      <table
+        class="min-w-full bg-white border border-gray-300 rounded-lg shadow-lg"
+      >
         <thead class="bg-[#008000] text-white">
           <tr>
             <th class="py-2 px-4 text-center">Hora</th>
@@ -226,15 +305,26 @@
         <tbody>
           <tr class="bg-gray-100 text-black text-center">
             <td class="py-2 px-4">8:30</td>
-            <td class="py-2 px-4">GAD1: INAUGURACIÓN  ||  GAD2: INAUGURACIÓN  ||  ADI1: INAUGURACIÓN  ||  ADI2: INAUGURACIÓN</td>
+            <td class="py-2 px-4"
+              >GAD1: INAUGURACIÓN || GAD2: INAUGURACIÓN || ADI1: INAUGURACIÓN ||
+              ADI2: INAUGURACIÓN</td
+            >
           </tr>
           <tr class="bg-white text-black text-center">
             <td class="py-2 px-4">9:00</td>
-            <td class="py-2 px-4">GAD1: EscapeRoom2/OCA - IsaMulet/Encarna (María) || GAD2: EscapeRoom2/OCA - IsaMulet/Encarna (María) || ADI1: EscapeRoom ODS/GAFAS - Ana y Loreto/PACO || ADI2: Verifica2 - Isabel</td>
+            <td class="py-2 px-4"
+              >GAD1: EscapeRoom2/OCA - IsaMulet/Encarna (María) || GAD2:
+              EscapeRoom2/OCA - IsaMulet/Encarna (María) || ADI1: EscapeRoom
+              ODS/GAFAS - Ana y Loreto/PACO || ADI2: Verifica2 - Isabel</td
+            >
           </tr>
           <tr class="bg-gray-100 text-black text-center">
             <td class="py-2 px-4">10:00</td>
-            <td class="py-2 px-4">GAD1: EscapeRoom2/OCA - IsaMulet/Encarna (María) || GAD2: (des)CONECTA - Ana Guiberteau || ADI1: EscapeRoom ODS/GAFAS - Ana y Loreto/PACO || ADI2: Empoderamiento y Mindset - Isabel</td>
+            <td class="py-2 px-4"
+              >GAD1: EscapeRoom2/OCA - IsaMulet/Encarna (María) || GAD2:
+              (des)CONECTA - Ana Guiberteau || ADI1: EscapeRoom ODS/GAFAS - Ana
+              y Loreto/PACO || ADI2: Empoderamiento y Mindset - Isabel</td
+            >
           </tr>
           <tr class="bg-white text-black text-center">
             <td class="py-2 px-4">11:15</td>
@@ -242,27 +332,46 @@
           </tr>
           <tr class="bg-gray-100 text-black text-center">
             <td class="py-2 px-4">11:45</td>
-            <td class="py-2 px-4">GAD1: (des)CONECTA - Isabel Mueve || GAD2: GAFAS - María e Isabel || ADI1: Empoderamiento y Mindset - Mercedes || ADI2: EscapeRoom ODS - Ana y Mar (Encarna mueve)</td>
+            <td class="py-2 px-4"
+              >GAD1: (des)CONECTA - Isabel Mueve || GAD2: GAFAS - María e Isabel
+              || ADI1: Empoderamiento y Mindset - Mercedes || ADI2: EscapeRoom
+              ODS - Ana y Mar (Encarna mueve)</td
+            >
           </tr>
           <tr class="bg-white text-black text-center">
             <td class="py-2 px-4">13:00</td>
-            <td class="py-2 px-4">GAD1: Empoderamiento y Mindset - Mar y María || GAD2: EscapeRoom ODS - Ana y Ana Guiber || ADI1: Verifica2 - Mercedes || ADI2: GAFAS - PACO</td>
+            <td class="py-2 px-4"
+              >GAD1: Empoderamiento y Mindset - Mar y María || GAD2: EscapeRoom
+              ODS - Ana y Ana Guiber || ADI1: Verifica2 - Mercedes || ADI2:
+              GAFAS - PACO</td
+            >
           </tr>
           <tr class="bg-gray-100 text-black text-center">
             <td class="py-2 px-4">14:00</td>
-            <td class="py-2 px-4">GAD1: CLAUSURA - María || GAD2: CLAUSURA - Ana Guiberteau || ADI1: CLAUSURA - Mercedes || ADI2: CLAUSURA - Encarna</td>
+            <td class="py-2 px-4"
+              >GAD1: CLAUSURA - María || GAD2: CLAUSURA - Ana Guiberteau ||
+              ADI1: CLAUSURA - Mercedes || ADI2: CLAUSURA - Encarna</td
+            >
           </tr>
           <tr class="bg-white text-black text-center">
             <td class="py-2 px-4">16:00</td>
-            <td class="py-2 px-4">AF1: INAUGURACIÓN - Verifica2: Juan Carlos || AF2: INAUGURACIÓN - EscapeRoom ODS/GAFAS: Ana y Raquel/PACO</td>
+            <td class="py-2 px-4"
+              >AF1: INAUGURACIÓN - Verifica2: Juan Carlos || AF2: INAUGURACIÓN -
+              EscapeRoom ODS/GAFAS: Ana y Raquel/PACO</td
+            >
           </tr>
           <tr class="bg-gray-100 text-black text-center">
             <td class="py-2 px-4">16:30</td>
-            <td class="py-2 px-4">AF1: Verifica2 - Juan Carlos || AF2: Verifica2 - Juan Carlos</td>
+            <td class="py-2 px-4"
+              >AF1: Verifica2 - Juan Carlos || AF2: Verifica2 - Juan Carlos</td
+            >
           </tr>
           <tr class="bg-white text-black text-center">
             <td class="py-2 px-4">17:30</td>
-            <td class="py-2 px-4">AF1: EscapeRoom ODS/GAFAS - Ana y Raquel/PACO || AF2: EscapeRoom ODS/GAFAS - Ana y Raquel/PACO</td>
+            <td class="py-2 px-4"
+              >AF1: EscapeRoom ODS/GAFAS - Ana y Raquel/PACO || AF2: EscapeRoom
+              ODS/GAFAS - Ana y Raquel/PACO</td
+            >
           </tr>
           <tr class="bg-gray-100 text-black text-center">
             <td class="py-2 px-4">18:15</td>
@@ -270,56 +379,26 @@
           </tr>
           <tr class="bg-white text-black text-center">
             <td class="py-2 px-4">18:45</td>
-            <td class="py-2 px-4">AF1: Empoderamiento y Mindset - Mª Ángeles || AF2: Empoderamiento y Mindset - Juan Carlos</td>
+            <td class="py-2 px-4"
+              >AF1: Empoderamiento y Mindset - Mª Ángeles || AF2: Empoderamiento
+              y Mindset - Juan Carlos</td
+            >
           </tr>
           <tr class="bg-gray-100 text-black text-center">
             <td class="py-2 px-4">19:45</td>
-            <td class="py-2 px-4">AF1: EscapeRoom ODS/GAFAS - Ana y Mª Ángeles/PACO || AF2: EscapeRoom ODS/GAFAS - Ana y Raquel/PACO</td>
+            <td class="py-2 px-4"
+              >AF1: EscapeRoom ODS/GAFAS - Ana y Mª Ángeles/PACO || AF2:
+              EscapeRoom ODS/GAFAS - Ana y Raquel/PACO</td
+            >
           </tr>
           <tr class="bg-white text-black text-center">
             <td class="py-2 px-4">20:45</td>
-            <td class="py-2 px-4">AF1: CLAUSURA - Mª Ángeles || AF2: CLAUSURA - Juan Carlos</td>
+            <td class="py-2 px-4"
+              >AF1: CLAUSURA - Mª Ángeles || AF2: CLAUSURA - Juan Carlos</td
+            >
           </tr>
         </tbody>
       </table>
-    </div>
-  </div>
-</div>
-
-<div
-  id="detallesModalAdministracionGestion"
-  class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden z-10"
-  onclick="closeModal('detallesModalAdministracionGestion')"
->
-  <div
-    class="modal-enter bg-white text-gray-800 rounded-2xl shadow-2xl w-11/12 max-w-3xl p-8 relative"
-  >
-    <!-- Botón de cierre -->
-    <button
-      onclick="closeModal('detallesModalAdministracionGestion')"
-      class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-3xl font-bold"
-    >
-      &times;
-    </button>
-
-    <!-- Título principal -->
-    <h1 class="text-3xl font-extrabold text-center text-blue-600 mb-6">
-      Actividades Principales
-    </h1>
-
-    <!-- Sección 1 -->
-    <div class="mb-6 overflow-auto content">
-      <h2 class="text-2xl font-semibold text-gray-700 mb-3">
-        Conoce las Empresas Tecnológicas:
-      </h2>
-      <ul class="list-disc list-inside text-gray-600 space-y-2">
-        <li>
-          <strong>Exhibición de Empresas:</strong> Conoce productos y servicios innovadores.
-        </li>
-        <li>
-          <strong>Networking:</strong> Intercambia ideas con empresarios y profesionales.
-        </li>
-      </ul>
     </div>
   </div>
 </div>
@@ -358,72 +437,67 @@
           <tr class="bg-gray-100 text-black text-center">
             <td class="py-2 px-4">09:00</td>
             <td class="py-2 px-4"
-              >Presentación de las Jornadas. ; Moisés Prieto Rollán, CEO de Fibrix dará una conferencia en la sala SUM sobre crecer y emprender desde la fp.</td
+              >Presentación de las Jornadas. ; Moisés Prieto Rollán, CEO de
+              Fibrix dará una conferencia en la sala SUM sobre crecer y
+              emprender desde la fp.</td
             >
           </tr>
-          </tr>
-          <tr class="bg-gray-100 text-black text-center">
-            <td class="py-2 px-4">10:30</td>
-            <td class="py-2 px-4"
-              >Descanso.</td
-            >
-          </tr>
-          <tr class="bg-gray-100 text-black text-center">
-            <td class="py-2 px-4">11:00</td>
-            <td class="py-2 px-4"
-              >Sala ACOM2: Potencia tu Marca con IA: Estrategias de Branding Profesional. ; Sala ACOM2: Pack & Play: Diseño y Creatividad</td
-            >
-          </tr>
-
-          <tr class="bg-gray-100 text-black text-center">
-            <td class="py-2 px-4">14:30</td>
-            <td class="py-2 px-4"
-              >Final de la jornada de la mañana.</td
-            >
-          </tr>
-
-          <tr class="bg-gray-100 text-black text-center">
-            <td class="py-2 px-4">16:00</td>
-            <td class="py-2 px-4"
-              >Cristina Fernández Gallardo, de la empresa Extremadura Avante dará una conferencia en la sala SUM sobre Extremadura Avante: Impulsando el talento con programas formativos en Comercio Internacional. ; Conferencia/Taller con Antonio Gallego Pérez, CEO de AGP hablará sobre El Reto De La Eexportación, Un Mundo Lleno De Posibilidades.</td
-            >
-          </tr>
-
-          <tr class="bg-gray-100 text-black text-center">
-            <td class="py-2 px-4">18:00</td>
-            <td class="py-2 px-4"
-              >MESA Redonda EX-ALUMNOS COI SUM</td
-            >
-          </tr>
-
-          <tr class="bg-gray-100 text-black text-center">
-            <td class="py-2 px-4">19:00</td>
-            <td class="py-2 px-4"
-              >Descanso.</td
-            >
-          </tr>
-          
-          <tr class="bg-gray-100 text-black text-center">
-            <td class="py-2 px-4">19:30</td>
-            <td class="py-2 px-4"
-              >Talleres del Grupo Talentia: Liderazgo con Raúl de Tena Rubio, Comunicación con Mafalda Herrera Martínez y Inteligencia emocional con Macarena Muñoz Gómez.</td
-            >
-          </tr>
-
-          <tr class="bg-gray-100 text-black text-center">
-            <td class="py-2 px-4">21:30</td>
-            <td class="py-2 px-4"
-              >Final de la jornada de la tarde.</td
-            >
-          </tr>
-          
         </tbody>
+        <tr class="bg-gray-100 text-black text-center">
+          <td class="py-2 px-4">10:30</td>
+          <td class="py-2 px-4">Descanso.</td>
+        </tr>
+        <tr class="bg-gray-100 text-black text-center">
+          <td class="py-2 px-4">11:00</td>
+          <td class="py-2 px-4"
+            >Sala ACOM2: Potencia tu Marca con IA: Estrategias de Branding
+            Profesional. ; Sala ACOM2: Pack & Play: Diseño y Creatividad</td
+          >
+        </tr>
+
+        <tr class="bg-gray-100 text-black text-center">
+          <td class="py-2 px-4">14:30</td>
+          <td class="py-2 px-4">Final de la jornada de la mañana.</td>
+        </tr>
+
+        <tr class="bg-gray-100 text-black text-center">
+          <td class="py-2 px-4">16:00</td>
+          <td class="py-2 px-4"
+            >Cristina Fernández Gallardo, de la empresa Extremadura Avante dará
+            una conferencia en la sala SUM sobre Extremadura Avante: Impulsando
+            el talento con programas formativos en Comercio Internacional. ;
+            Conferencia/Taller con Antonio Gallego Pérez, CEO de AGP hablará
+            sobre El Reto De La Eexportación, Un Mundo Lleno De Posibilidades.</td
+          >
+        </tr>
+
+        <tr class="bg-gray-100 text-black text-center">
+          <td class="py-2 px-4">18:00</td>
+          <td class="py-2 px-4">MESA Redonda EX-ALUMNOS COI SUM</td>
+        </tr>
+
+        <tr class="bg-gray-100 text-black text-center">
+          <td class="py-2 px-4">19:00</td>
+          <td class="py-2 px-4">Descanso.</td>
+        </tr>
+
+        <tr class="bg-gray-100 text-black text-center">
+          <td class="py-2 px-4">19:30</td>
+          <td class="py-2 px-4"
+            >Talleres del Grupo Talentia: Liderazgo con Raúl de Tena Rubio,
+            Comunicación con Mafalda Herrera Martínez y Inteligencia emocional
+            con Macarena Muñoz Gómez.</td
+          >
+        </tr>
+
+        <tr class="bg-gray-100 text-black text-center">
+          <td class="py-2 px-4">21:30</td>
+          <td class="py-2 px-4">Final de la jornada de la tarde.</td>
+        </tr>
       </table>
     </div>
   </div>
 </div>
-
-
 
 <!-- Modal Informatica -->
 
@@ -542,77 +616,6 @@
     </div>
   </div>
 </div>
-<div
-  id="detallesModalInformatica"
-  class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden z-10"
->
-  <div
-    class="modal-enter bg-white text-gray-800 rounded-2xl shadow-2xl w-11/12 max-w-3xl p-8 relative"
-  >
-    <!-- Botón de cierre -->
-    <button
-      onclick="closeModal('detallesModalInformatica')"
-      class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-3xl font-bold"
-    >
-      &times;
-    </button>
-
-    <!-- Título principal -->
-    <h1 class="text-3xl font-extrabold text-center text-blue-600 mb-6">
-      Actividades Principales
-    </h1>
-    <div class="overflow-auto content">
-      <!-- Sección 1 -->
-      <div class="mb-6">
-        <h2 class="text-2xl font-semibold text-gray-700 mb-3">
-          Conoce las Empresas Tecnológicas:
-        </h2>
-        <ul class="list-disc list-inside text-gray-600 space-y-2">
-          <li>
-            <strong>Exhibición de Empresas:</strong> Conoce productos y servicios
-            innovadores.
-          </li>
-          <li>
-            <strong>Networking:</strong> Intercambia ideas con empresarios y profesionales.
-          </li>
-        </ul>
-      </div>
-
-      <!-- Sección 2 -->
-      <div class="mb-6">
-        <h2 class="text-2xl font-semibold text-gray-700 mb-3">
-          Tendencias en el Mercado:
-        </h2>
-        <ul class="list-disc list-inside text-gray-600 space-y-2">
-          <li>
-            <strong>Charlas:</strong> Descubre las tecnologías emergentes más demandadas.
-          </li>
-          <li>
-            <strong>Talleres Prácticos:</strong> Participa y aprende sobre IA, ciberseguridad,
-            y más.
-          </li>
-        </ul>
-      </div>
-
-      <!-- Sección 3 -->
-      <div class="mb-6">
-        <h2 class="text-2xl font-semibold text-gray-700 mb-3">
-          Acceso a Ofertas Exclusivas:
-        </h2>
-        <ul class="list-disc list-inside text-gray-600 space-y-2">
-          <li>
-            <strong>Bolsa de Trabajo:</strong> Encuentra oportunidades laborales
-            únicas.
-          </li>
-          <li>
-            <strong>Sesiones de Reclutamiento:</strong> Participa en entrevistas
-            y selecciones.
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- Modal ESOBachillerato -->
 
@@ -653,43 +656,6 @@
           </tr>
         </tbody>
       </table>
-    </div>
-  </div>
-</div>
-
-<div
-  id="detallesModalEsoBachillerato"
-  class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden z-10"
->
-  <div
-    class="modal-enter bg-white text-gray-800 rounded-2xl shadow-2xl w-11/12 max-w-3xl p-8 relative"
-  >
-    <!-- Botón de cierre -->
-    <button
-      onclick="closeModal('detallesModalEsoBachillerato')"
-      class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-3xl font-bold"
-    >
-      &times;
-    </button>
-
-    <!-- Título principal -->
-    <h1 class="text-3xl font-extrabold text-center text-blue-600 mb-6">
-      Actividades Principales
-    </h1>
-
-    <!-- Sección 1 -->
-    <div class="mb-6 overflow-auto content">
-      <h2 class="text-2xl font-semibold text-gray-700 mb-3">
-        Conoce las Empresas Tecnológicas:
-      </h2>
-      <ul class="list-disc list-inside text-gray-600 space-y-2">
-        <li>
-          <strong>Exhibición de Empresas:</strong> Conoce productos y servicios innovadores.
-        </li>
-        <li>
-          <strong>Networking:</strong> Intercambia ideas con empresarios y profesionales.
-        </li>
-      </ul>
     </div>
   </div>
 </div>
@@ -771,6 +737,15 @@
   .purple h3 {
     border-bottom: 2px solid purple;
     color: purple;
+  }
+
+  .yellow {
+    border: 2px solid #fdc01a;
+  }
+
+  .yellow h3 {
+    border-bottom: 2px solid #fdc01a;
+    color: #fdc01a;
   }
 
   .img-container {
@@ -858,6 +833,7 @@
   #blueLight,
   #redLight,
   #greenLight,
+  #yellowLight,
   #purpleLight {
     animation-play-state: paused;
   }
@@ -876,6 +852,10 @@
 
   #purpleLight {
     animation: glowPurple 3s ease-in-out forwards;
+  }
+
+  #yellowLight {
+    animation: glowYellow 3s ease-in-out forwards;
   }
 
   @keyframes glowBlue {
@@ -915,6 +895,16 @@
 
     to {
       filter: drop-shadow(2px 2px 10px rgb(255, 0, 255));
+    }
+  }
+
+  @keyframes glowYellow {
+    from {
+      filter: drop-shadow(2px 2px 2px #fdc01a00);
+    }
+
+    to {
+      filter: drop-shadow(2px 2px 10px #fdc01a);
     }
   }
 
@@ -1162,7 +1152,7 @@
     },
     {
       threshold: 0.1, // Dispara la animación cuando una pequeña parte de la tarjeta es visible
-    }
+    },
   );
 
   // Preparar las tarjetas antes de observarlas
@@ -1210,7 +1200,7 @@
     },
     {
       threshold: 0.5, // Dispara la animación cuando el 50% del contenedor sea visible
-    }
+    },
   );
 
   // Iniciar la observación del contenedor
