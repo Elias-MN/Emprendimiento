@@ -42,22 +42,16 @@
         </h3>
         <div class="p-container">
           <p id="text">
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            Descubre cómo las competencias en administración y gestión pueden marcar la diferencia en el mundo del emprendimiento. 
+            Durante esta jornada, exploraremos casos prácticos, herramientas innovadoras y estrategias clave que impulsan a los 
+            futuros gestores y administrativos a crear y liderar sus propios proyectos con éxito. ¡Es tu oportunidad para conectar teoría y práctica en el apasionante universo de los negocios!
           </p>
         </div>
         <!-- Buttons -->
         <div class="flex gap-4 mt-4 justify-end">
           <button
             class="py-2 px-4 bg-[#008000] text-white rounded"
-            onclick="openModal('horarioModalEsoBachillerato')">Horario</button
-          >
-          <button
-            class="py-2 px-4 bg-[#008000] text-white rounded"
-            onclick="openModal('detallesModalEsoBachillerato')"
-            >Ver detalles</button
+            onclick="openModal('horarioModalAdministracionGestion')">Horario</button
           >
         </div>
       </div>
@@ -215,19 +209,22 @@
 >
   <div
     class="bg-white rounded-lg overflow-hidden shadow-2xl max-w-4xl w-full mx-4 p-6"
+    onclick="event.stopPropagation()" 
   >
-    <div class="bg-blue-700 text-white p-4 flex justify-between items-center">
-      <h2 class="text-2xl font-extrabold">Horario del dia 3</h2>
+    <!-- Encabezado del modal -->
+    <div class="bg-[#008000] text-white p-4 flex justify-between items-center">
+      <h2 class="text-2xl font-extrabold">Horario del día 3</h2>
       <button
         onclick="closeModal('horarioModalAdministracionGestion')"
         class="text-white text-3xl font-bold hover:text-red-400 transition duration-300"
       >
+        &times;
+      </button>
     </div>
+    <!-- Contenido del modal -->
     <div class="overflow-x-auto mt-4 max-h-96 overflow-y-auto">
-      <table
-        class="min-w-full bg-white border border-gray-300 rounded-lg shadow-lg"
-      >
-        <thead class="bg-blue-700 text-white">
+      <table class="min-w-full bg-white border border-gray-300 rounded-lg shadow-lg">
+        <thead class="bg-[#008000] text-white">
           <tr>
             <th class="py-2 px-4 text-center">Hora</th>
             <th class="py-2 px-4 text-center">Actividad</th>
@@ -235,11 +232,60 @@
         </thead>
         <tbody>
           <tr class="bg-gray-100 text-black text-center">
+            <td class="py-2 px-4">8:30</td>
+            <td class="py-2 px-4">GAD1: INAUGURACIÓN  ||  GAD2: INAUGURACIÓN  ||  ADI1: INAUGURACIÓN  ||  ADI2: INAUGURACIÓN</td>
+          </tr>
+          <tr class="bg-white text-black text-center">
+            <td class="py-2 px-4">9:00</td>
+            <td class="py-2 px-4">GAD1: EscapeRoom2/OCA - IsaMulet/Encarna (María) || GAD2: EscapeRoom2/OCA - IsaMulet/Encarna (María) || ADI1: EscapeRoom ODS/GAFAS - Ana y Loreto/PACO || ADI2: Verifica2 - Isabel</td>
+          </tr>
+          <tr class="bg-gray-100 text-black text-center">
+            <td class="py-2 px-4">10:00</td>
+            <td class="py-2 px-4">GAD1: EscapeRoom2/OCA - IsaMulet/Encarna (María) || GAD2: (des)CONECTA - Ana Guiberteau || ADI1: EscapeRoom ODS/GAFAS - Ana y Loreto/PACO || ADI2: Empoderamiento y Mindset - Isabel</td>
+          </tr>
+          <tr class="bg-white text-black text-center">
+            <td class="py-2 px-4">11:15</td>
+            <td class="py-2 px-4">DESCANSO</td>
+          </tr>
+          <tr class="bg-gray-100 text-black text-center">
+            <td class="py-2 px-4">11:45</td>
+            <td class="py-2 px-4">GAD1: (des)CONECTA - Isabel Mueve || GAD2: GAFAS - María e Isabel || ADI1: Empoderamiento y Mindset - Mercedes || ADI2: EscapeRoom ODS - Ana y Mar (Encarna mueve)</td>
+          </tr>
+          <tr class="bg-white text-black text-center">
+            <td class="py-2 px-4">13:00</td>
+            <td class="py-2 px-4">GAD1: Empoderamiento y Mindset - Mar y María || GAD2: EscapeRoom ODS - Ana y Ana Guiber || ADI1: Verifica2 - Mercedes || ADI2: GAFAS - PACO</td>
+          </tr>
+          <tr class="bg-gray-100 text-black text-center">
+            <td class="py-2 px-4">14:00</td>
+            <td class="py-2 px-4">GAD1: CLAUSURA - María || GAD2: CLAUSURA - Ana Guiberteau || ADI1: CLAUSURA - Mercedes || ADI2: CLAUSURA - Encarna</td>
+          </tr>
+          <tr class="bg-white text-black text-center">
             <td class="py-2 px-4">16:00</td>
-            <td class="py-2 px-4"
-              >Primer acercamiento del alumnado a las empresas. Visita a stands
-              de empresas con información sobre proyectos, tecnologías, etc.</td
-            >
+            <td class="py-2 px-4">AF1: INAUGURACIÓN - Verifica2: Juan Carlos || AF2: INAUGURACIÓN - EscapeRoom ODS/GAFAS: Ana y Raquel/PACO</td>
+          </tr>
+          <tr class="bg-gray-100 text-black text-center">
+            <td class="py-2 px-4">16:30</td>
+            <td class="py-2 px-4">AF1: Verifica2 - Juan Carlos || AF2: Verifica2 - Juan Carlos</td>
+          </tr>
+          <tr class="bg-white text-black text-center">
+            <td class="py-2 px-4">17:30</td>
+            <td class="py-2 px-4">AF1: EscapeRoom ODS/GAFAS - Ana y Raquel/PACO || AF2: EscapeRoom ODS/GAFAS - Ana y Raquel/PACO</td>
+          </tr>
+          <tr class="bg-gray-100 text-black text-center">
+            <td class="py-2 px-4">18:15</td>
+            <td class="py-2 px-4">DESCANSO</td>
+          </tr>
+          <tr class="bg-white text-black text-center">
+            <td class="py-2 px-4">18:45</td>
+            <td class="py-2 px-4">AF1: Empoderamiento y Mindset - Mª Ángeles || AF2: Empoderamiento y Mindset - Juan Carlos</td>
+          </tr>
+          <tr class="bg-gray-100 text-black text-center">
+            <td class="py-2 px-4">19:45</td>
+            <td class="py-2 px-4">AF1: EscapeRoom ODS/GAFAS - Ana y Mª Ángeles/PACO || AF2: EscapeRoom ODS/GAFAS - Ana y Raquel/PACO</td>
+          </tr>
+          <tr class="bg-white text-black text-center">
+            <td class="py-2 px-4">20:45</td>
+            <td class="py-2 px-4">AF1: CLAUSURA - Mª Ángeles || AF2: CLAUSURA - Juan Carlos</td>
           </tr>
         </tbody>
       </table>
