@@ -3,30 +3,38 @@
 </h1>
 
 <div class="introduction-container border-solid accent-accent-color">
-  <div class="introduction-card delay-[100ms] duration-[600ms] taos:translate-x-[-100%] taos:opacity-0">
+  <div class="introduction-card delay-[300ms] duration-[600ms] taos:translate-y-[100%] taos:opacity-0 " data-taos-offset="-300">
     <div class="image-container">
       <img
         src="images/info/circuloODS.webp"
         alt="Evento de emprendimiento"
-        class="card-image">
+        class="card-image"
+        id="card-image1">
     </div>
+
+    <div class="divisor h-px md:h-32 w-full md:w-px bg-gray-200" />
+
     <div class="info-text text-right">
       <p>
         La jornada del emprendimiento es una semana especial en el instituto Albarregas, donde los estudiantes pueden aprender sobre innovación y creatividad en los negocios a través de talleres y conferencias.</p>
     </div>
   </div>
 
-  <div class="introduction-card delay-[100ms] duration-[600ms] taos:translate-x-[-100%] taos:opacity-0">
+  <div class="introduction-card delay-[300ms] duration-[600ms] taos:translate-y-[100%] taos:opacity-0" data-taos-offset="-300">
+
+    <div class="divisor h-px md:h-32 w-full md:w-px bg-gray-200" />
+
     <div class="info-text text-left">
       <p>
         Los estudiantes desarrollarán habilidades clave para convertirse en futuros emprendedores mediante actividades prácticas y trabajo en equipo.
       </p>
     </div>
-    <div class="image-container">
+
+    <div class="image-container w-44">
       <img
-        src="images/header/logoAlbarregas.png"
+        src="images/info/iesAlbarregas.webp"
         alt="Evento de emprendimiento"
-        class="card-image">
+        class="card-image ">
     </div>
   </div>
 </div>
@@ -70,6 +78,13 @@
     object-fit: contain;
     height: 20vw;
   }
+  #card-image1{
+    width:40%;
+  }
+
+  .divisor{
+    display: none;
+  }
 
   .info-text {
     width: 50%;
@@ -83,6 +98,14 @@
   }
 
   @media (max-width: 768px) {
+    .title-info {
+    margin-top: 4vh;
+  }
+
+    .divisor{
+      display: block;
+    }
+
     .introduction-card {
       flex-direction: column;
       height: auto;
@@ -104,6 +127,7 @@
       height: auto;
       max-width: 250px;
       width: 80%;
+  
     }
 
     .info-text p {
