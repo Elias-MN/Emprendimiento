@@ -1,9 +1,0 @@
----
-const imageFiles = await Astro.glob('../assets/images/*');
-
----
-  {imageFiles.map((img) => (
-    <div class="div1 first bg-white-color flex ">
-      <img src={img.default.src} alt="" />
-    </div>
-  ))}

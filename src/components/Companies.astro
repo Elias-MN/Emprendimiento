@@ -3,6 +3,7 @@ const imageFiles = await Astro.glob('../assets/images/*');
 ---
 <div id="companies" class="bg-white pb-8">
   <h1 class="font-bold text-secondary-color p-10 text-xl tablet:text-2xl computer:text-4xl text-center">COLABORADORES</h1>
+
   <div class="w-11/12 m-auto grid gap-4 grid-cols-3 tablet:grid-cols-4 computer:grid-cols-5">
     {
       imageFiles.map((img) => (
@@ -16,13 +17,13 @@ const imageFiles = await Astro.glob('../assets/images/*');
 
 <style>
 
-
   .square {
     position: relative;
     opacity: 0;
     transform: translateY(20px);
     animation: show 3.5s ease-in-out 2s forwards;
     animation-timeline: view();
+    animation-range: entry 0% cover 20%;
   }
 
   @keyframes show {
