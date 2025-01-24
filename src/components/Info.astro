@@ -231,6 +231,8 @@
   </div>
 </div>
 
+<!-- Inaguración -->
+
 <div
   id="horarioModalInaguracion"
   class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-10 hidden"
@@ -238,37 +240,157 @@
 >
   <div
     class="bg-white rounded-lg overflow-hidden shadow-2xl max-w-4xl w-full mx-4 p-6"
+    onclick="event.stopPropagation()"
   >
+    <!-- Encabezado del modal -->
     <div class="bg-[#FDC01A] text-white p-4 flex justify-between items-center">
-      <h2 class="text-2xl font-extrabold">Horario del dia 3</h2>
+      <h2 class="text-2xl font-extrabold">Horario del día 3</h2>
       <button
         onclick="closeModal('horarioModalInaguracion')"
         class="text-white text-3xl font-bold hover:text-red-400 transition duration-300"
       >
-      &times;
       </button>
-      <div class="overflow-x-auto mt-4 max-h-96 overflow-y-auto">
-        <table
-          class="min-w-full bg-white border border-gray-300 rounded-lg shadow-lg"
-        >
-          <thead class="bg-[#FDC01A] text-white">
-            <tr>
-              <th class="py-2 px-4 text-center">Hora</th>
-              <th class="py-2 px-4 text-center">Actividad</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="bg-gray-100 text-black text-center">
-              <td class="py-2 px-4">16:00</td>
-              <td class="py-2 px-4"
-                >Primer acercamiento del alumnado a las empresas. Visita a
-                stands de empresas con información sobre proyectos, tecnologías,
-                etc.</td
-              >
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    </div>
+    <div class="overflow-x-auto mt-4 max-h-96 overflow-y-auto">
+      <table
+        class="min-w-full bg-white border border-gray-300 rounded-lg shadow-lg"
+      >
+        <thead class="bg-[#FDC01A] text-white">
+          <tr>
+            <th class="py-2 px-4 text-center">Hora</th>
+            <th class="py-2 px-4 text-center">Actividad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="bg-gray-100 text-black text-center">
+            <td class="py-2 px-4">09:00</td>
+            <td class="py-2 px-4"
+              >Acto de apertura. Participan: Ayuntamiento, Cámara de Comercio,
+              DG.</td
+            >
+          </tr>
+          <tr class="bg-white text-black text-center">
+            <td class="py-2 px-4">09:45</td>
+            <td class="py-2 px-4">
+              Charlas de Empresas Sostenibles:
+              <ul class="list-disc pl-5">
+                <li>09:45: La Hormiga Verde</li>
+                <li>10:00: Miel Valles del Anam</li>
+                <li>10:15: FabLab</li>
+                <li>10:30: Aloe Vera Ecológico Hernán Cortés - La Vendita</li>
+                <li>11:00: FEMEC Andrés de la Villa</li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="bg-gray-100 text-black text-center">
+            <td class="py-2 px-4">11:15</td>
+            <td class="py-2 px-4">Coworking Aula de Emprendimiento</td>
+          </tr>
+          <tr class="bg-white text-black text-center">
+            <td class="py-2 px-4">12:00</td>
+            <td class="py-2 px-4">
+              Mesa Redonda Antiguos Alumnos:
+              <ul class="list-disc pl-5">
+                <li>IVAN SOLWED</li>
+                <li>ARTURO ONE (Confirmado)</li>
+                <li>NAZARET ADM (Servicio)</li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="bg-gray-100 text-black text-center">
+            <td class="py-2 px-4">13:00</td>
+            <td class="py-2 px-4">
+              Visita de los Empresarios a las Aulas:
+              <ul class="list-disc pl-5">
+                <li>
+                  Administración:
+                  <ul>
+                    <li>GM 1 + Básica 1: A DE ARCO</li>
+                    <li>GM 2 + Básica 2: Otra empresa FEMEC</li>
+                    <li>GS 1: Andrés de la Villa</li>
+                    <li>GS 2: CUENTAMÁS</li>
+                  </ul>
+                </li>
+                <li>
+                  Comercio:
+                  <ul>
+                    <li>GM 1: Laura Serrano (Tienda Sándalo)</li>
+                    <li>GM 2: Tania García Moreno (Sprinter)</li>
+                  </ul>
+                </li>
+                <li>
+                  Informática:
+                  <ul>
+                    <li>GS 1: Están en Dual</li>
+                    <li>GS 2: SOLWED (Confirmado)</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="bg-white text-black text-center">
+            <td class="py-2 px-4">16:30</td>
+            <td class="py-2 px-4">Acto de apertura</td>
+          </tr>
+          <tr class="bg-gray-100 text-black text-center">
+            <td class="py-2 px-4">17:00</td>
+            <td class="py-2 px-4">
+              Charlas de Empresas Sostenibles:
+              <ul class="list-disc pl-5">
+                <li>Miel Valles del Anam</li>
+                <li>FEMEC ANDRÉS DE LA VILLA</li>
+                <li>FabLab</li>
+                <li>???</li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="bg-white text-black text-center">
+            <td class="py-2 px-4">18:00</td>
+            <td class="py-2 px-4">Coworking Aula de Emprendimiento</td>
+          </tr>
+          <tr class="bg-gray-100 text-black text-center">
+            <td class="py-2 px-4">18:45</td>
+            <td class="py-2 px-4">
+              Mesa redonda Antiguos Alumnos:
+              <ul class="list-disc pl-5">
+                <li>IVAN SOLWED</li>
+                <li>ARTURO ONEX (Confirmado) - Rosario</li>
+                <li>NAZARET ADM - Almudena</li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="bg-white text-black text-center">
+            <td class="py-2 px-4">19:45</td>
+            <td class="py-2 px-4">
+              Visita de los Empresarios a las Aulas:
+              <ul class="list-disc pl-5">
+                <li>AFI1: Miel Valles del Anam</li>
+                <li>AFI2: Andrés???</li>
+                <li>COI1: Francisco J. Moreno (Director Gerente Acopaex)</li>
+                <li>COI2: NATURVIE (FERNANDO SANCHEZ)</li>
+                <li>TYL1 TYL2: PEDRO SERRANO (ALDITRAEX)</li>
+                <li>
+                  DAM y DAW: ESNED Escuela de Negocio Digital - confirmada en
+                  SUM
+                </li>
+                <li>
+                  CEIABD: ESNED Escuela de Negocio Digital - confirmada en SUM
+                </li>
+                <li>
+                  LARA: Webinar de presentación del proyecto con el IES Gran Vía
+                  de Alicante
+                </li>
+                <li>
+                  LARA: Pendiente confirmar webinar proyecto Lara con IES
+                  Polígono Sur de Sevilla
+                </li>
+                <li>SOLWED: Confirmado</li>
+                <li>VEYVE TECNOLOGIC: Confirmado</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
