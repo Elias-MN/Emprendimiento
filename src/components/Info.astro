@@ -231,6 +231,8 @@
   </div>
 </div>
 
+<!-- Inaguración -->
+
 <div
   id="horarioModalInaguracion"
   class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-10 hidden"
@@ -238,36 +240,158 @@
 >
   <div
     class="bg-white rounded-lg overflow-hidden shadow-2xl max-w-4xl w-full mx-4 p-6"
+    onclick="event.stopPropagation()"
   >
+    <!-- Encabezado del modal -->
     <div class="bg-[#FDC01A] text-white p-4 flex justify-between items-center">
-      <h2 class="text-2xl font-extrabold">Horario del dia 3</h2>
+      <h2 class="text-2xl font-extrabold">Horario del día 3</h2>
       <button
         onclick="closeModal('horarioModalInaguracion')"
         class="text-white text-3xl font-bold hover:text-red-400 transition duration-300"
       >
+      &times;
       </button>
-      <div class="overflow-x-auto mt-4 max-h-96 overflow-y-auto">
-        <table
-          class="min-w-full bg-white border border-gray-300 rounded-lg shadow-lg"
-        >
-          <thead class="bg-[#FDC01A] text-white">
-            <tr>
-              <th class="py-2 px-4 text-center">Hora</th>
-              <th class="py-2 px-4 text-center">Actividad</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="bg-gray-100 text-black text-center">
-              <td class="py-2 px-4">16:00</td>
-              <td class="py-2 px-4"
-                >Primer acercamiento del alumnado a las empresas. Visita a
-                stands de empresas con información sobre proyectos, tecnologías,
-                etc.</td
-              >
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    </div>
+    <div class="overflow-x-auto mt-4 max-h-96 overflow-y-auto">
+      <table
+        class="min-w-full bg-white border border-gray-300 rounded-lg shadow-lg"
+      >
+        <thead class="bg-[#FDC01A] text-white">
+          <tr>
+            <th class="py-2 px-4 text-center">Hora</th>
+            <th class="py-2 px-4 text-center">Actividad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="bg-gray-100 text-black text-center">
+            <td class="py-2 px-4">09:00</td>
+            <td class="py-2 px-4"
+              >Acto de apertura. Participan: Ayuntamiento, Cámara de Comercio,
+              DG.</td
+            >
+          </tr>
+          <tr class="bg-white text-black text-center">
+            <td class="py-2 px-4">09:45</td>
+            <td class="py-2 px-4">
+              Charlas de Empresas Sostenibles:
+              <ul class="list-disc pl-5">
+                <li>09:45: La Hormiga Verde</li>
+                <li>10:00: Miel Valles del Anam</li>
+                <li>10:15: FabLab</li>
+                <li>10:30: Aloe Vera Ecológico Hernán Cortés - La Vendita</li>
+                <li>11:00: FEMEC Andrés de la Villa</li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="bg-gray-100 text-black text-center">
+            <td class="py-2 px-4">11:15</td>
+            <td class="py-2 px-4">Coworking Aula de Emprendimiento</td>
+          </tr>
+          <tr class="bg-white text-black text-center">
+            <td class="py-2 px-4">12:00</td>
+            <td class="py-2 px-4">
+              Mesa Redonda Antiguos Alumnos:
+              <ul class="list-disc pl-5">
+                <li>IVAN SOLWED</li>
+                <li>ARTURO ONE (Confirmado)</li>
+                <li>NAZARET ADM (Servicio)</li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="bg-gray-100 text-black text-center">
+            <td class="py-2 px-4">13:00</td>
+            <td class="py-2 px-4">
+              Visita de los Empresarios a las Aulas:
+              <ul class="list-disc pl-5">
+                <li>
+                  Administración:
+                  <ul>
+                    <li>GM 1 + Básica 1: A DE ARCO</li>
+                    <li>GM 2 + Básica 2: Otra empresa FEMEC</li>
+                    <li>GS 1: Andrés de la Villa</li>
+                    <li>GS 2: CUENTAMÁS</li>
+                  </ul>
+                </li>
+                <li>
+                  Comercio:
+                  <ul>
+                    <li>GM 1: Laura Serrano (Tienda Sándalo)</li>
+                    <li>GM 2: Tania García Moreno (Sprinter)</li>
+                  </ul>
+                </li>
+                <li>
+                  Informática:
+                  <ul>
+                    <li>GS 1: Están en Dual</li>
+                    <li>GS 2: SOLWED (Confirmado)</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="bg-white text-black text-center">
+            <td class="py-2 px-4">16:30</td>
+            <td class="py-2 px-4">Acto de apertura</td>
+          </tr>
+          <tr class="bg-gray-100 text-black text-center">
+            <td class="py-2 px-4">17:00</td>
+            <td class="py-2 px-4">
+              Charlas de Empresas Sostenibles:
+              <ul class="list-disc pl-5">
+                <li>Miel Valles del Anam</li>
+                <li>FEMEC ANDRÉS DE LA VILLA</li>
+                <li>FabLab</li>
+                <li>???</li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="bg-white text-black text-center">
+            <td class="py-2 px-4">18:00</td>
+            <td class="py-2 px-4">Coworking Aula de Emprendimiento</td>
+          </tr>
+          <tr class="bg-gray-100 text-black text-center">
+            <td class="py-2 px-4">18:45</td>
+            <td class="py-2 px-4">
+              Mesa redonda Antiguos Alumnos:
+              <ul class="list-disc pl-5">
+                <li>IVAN SOLWED</li>
+                <li>ARTURO ONEX (Confirmado) - Rosario</li>
+                <li>NAZARET ADM - Almudena</li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="bg-white text-black text-center">
+            <td class="py-2 px-4">19:45</td>
+            <td class="py-2 px-4">
+              Visita de los Empresarios a las Aulas:
+              <ul class="list-disc pl-5">
+                <li>AFI1: Miel Valles del Anam</li>
+                <li>AFI2: Andrés???</li>
+                <li>COI1: Francisco J. Moreno (Director Gerente Acopaex)</li>
+                <li>COI2: NATURVIE (FERNANDO SANCHEZ)</li>
+                <li>TYL1 TYL2: PEDRO SERRANO (ALDITRAEX)</li>
+                <li>
+                  DAM y DAW: ESNED Escuela de Negocio Digital - confirmada en
+                  SUM
+                </li>
+                <li>
+                  CEIABD: ESNED Escuela de Negocio Digital - confirmada en SUM
+                </li>
+                <li>
+                  LARA: Webinar de presentación del proyecto con el IES Gran Vía
+                  de Alicante
+                </li>
+                <li>
+                  LARA: Pendiente confirmar webinar proyecto Lara con IES
+                  Polígono Sur de Sevilla
+                </li>
+                <li>SOLWED: Confirmado</li>
+                <li>VEYVE TECNOLOGIC: Confirmado</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
@@ -281,7 +405,6 @@
 >
   <div
     class="bg-white rounded-lg overflow-hidden shadow-2xl max-w-4xl w-full mx-4 p-6"
-    onclick="event.stopPropagation()"
   >
     <!-- Encabezado del modal -->
     <div class="bg-[#008000] text-white p-4 flex justify-between items-center">
@@ -290,6 +413,7 @@
         onclick="closeModal('horarioModalAdministracionGestion')"
         class="text-white text-3xl font-bold hover:text-red-400 transition duration-300"
       >
+      &times;
       </button>
     </div>
     <div class="overflow-x-auto mt-4 max-h-96 overflow-y-auto">
@@ -414,7 +538,7 @@
     class="bg-white rounded-lg overflow-hidden shadow-2xl max-w-4xl w-full mx-4 p-6 relative"
   >
     <div class="bg-blue-700 text-white p-4 flex justify-between items-center">
-      <h2 class="text-2xl font-extrabold">Horario del dia 3</h2>
+      <h2 class="text-2xl font-extrabold">Horario del dia 5</h2>
       <!-- Botón de cierre -->
       <button
         onclick="closeModal('horarioModalComercioMarketing')"
@@ -443,7 +567,7 @@
             >
           </tr>
         </tbody>
-        <tr class="bg-gray-100 text-black text-center">
+        <tr class="bg-white text-black text-center">
           <td class="py-2 px-4">10:30</td>
           <td class="py-2 px-4">Descanso.</td>
         </tr>
@@ -455,7 +579,7 @@
           >
         </tr>
 
-        <tr class="bg-gray-100 text-black text-center">
+        <tr class="bg-white text-black text-center">
           <td class="py-2 px-4">14:30</td>
           <td class="py-2 px-4">Final de la jornada de la mañana.</td>
         </tr>
@@ -471,7 +595,7 @@
           >
         </tr>
 
-        <tr class="bg-gray-100 text-black text-center">
+        <tr class="bg-white text-black text-center">
           <td class="py-2 px-4">18:00</td>
           <td class="py-2 px-4">MESA Redonda EX-ALUMNOS COI SUM</td>
         </tr>
@@ -481,7 +605,7 @@
           <td class="py-2 px-4">Descanso.</td>
         </tr>
 
-        <tr class="bg-gray-100 text-black text-center">
+        <tr class="bg-white text-black text-center">
           <td class="py-2 px-4">19:30</td>
           <td class="py-2 px-4"
             >Talleres del Grupo Talentia: Liderazgo con Raúl de Tena Rubio,
@@ -618,7 +742,6 @@
 </div>
 
 <!-- Modal ESOBachillerato -->
-
 <div
   id="horarioModalEsoBachillerato"
   class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-10 hidden"
@@ -637,29 +760,80 @@
       </button>
     </div>
     <div class="overflow-x-auto mt-4 max-h-96 overflow-y-auto">
-      <table
-        class="min-w-full bg-white border border-gray-300 rounded-lg shadow-lg"
-      >
+      <table class="min-w-full bg-white border border-gray-300 rounded-lg shadow-lg">
         <thead class="bg-blue-700 text-white">
-          <tr>
-            <th class="py-2 px-4 text-center">Hora</th>
-            <th class="py-2 px-4 text-center">Actividad</th>
-          </tr>
+            <tr>
+                <th class="py-2 px-4 text-center">Horas</th>
+                <th class="py-2 px-4 text-center">Actividades</th>
+            </tr>
         </thead>
         <tbody>
-          <tr class="bg-gray-100 text-black text-center">
-            <td class="py-2 px-4">16:00</td>
-            <td class="py-2 px-4"
-              >Primer acercamiento del alumnado a las empresas. Visita a stands
-              de empresas con información sobre proyectos, tecnologías, etc.</td
-            >
+            <tr class="bg-gray-100 text-black text-center">
+                <td class="py-2 px-4">1º</td>
+                <td class="py-2 px-4">Presentación (2º ESO 1 - Aula de emprendemientos, 2º ESO 2 - Abanico, 4º ESO 1 y 2 y 1º Bachillerato - SUM)</td>
+            </tr>
+            <tr class="bg-gray-200 text-black text-center">
+              <td class="py-2 px-4">2º</td>
+              <td class="py-2 px-4">2º ESO 1: Cooperación Reto ODS 2 || 2º ESO 2: Creatividad Torre Espagueti || 4º ESO 1: Cooperación Reto ODS || 4º ESO 2: Cooperación  OCA pequeña || 1º Bachillerato: Comunicación Legos y dibujo</td>
           </tr>
+          <tr class="bg-gray-100 text-black text-center">
+            <td class="py-2 px-4">3º</td>
+            <td class="py-2 px-4">2º ESO 1: Cooperación  OCA grande || 2º ESO 2: Comunicación Legos y dibujo || 4º ESO 1: Cooperación OCA pequeña || 4º ESO 2: Cooperación Reto ODS 2 || 1º Bachillerato: Confianza Traje de novia</td>
+        </tr>
+        <tr class="bg-gray-200 text-black text-center">
+                <td class="py-2 px-4">4º</td>
+                <td class="py-2 px-4">2º ESO 1: Creatividad Torre Espagueti || 2º ESO 2: Cooperación Reto ODS 2 || 4º ESO 1: Comunicación Legos y dibujo || 4º ESO 2: Confianza Traje de novia || 1º Bachillerato: Cooperación Reto ODS 1</td>
+            </tr>
+            <tr class="bg-gray-100 text-black text-center">
+              <td class="py-2 px-4">5º</td>
+              <td class="py-2 px-4">2º ESO 1: Comunicación Legos y dibujo || 2º ESO 2: Cooperación OCA grande || 4º ESO 1: Creatividad Negociar cartas || 4º ESO 2: Creatividad Negociar cartas || 1º Bachillerato: Cooperación  OCA pequeña</td>
+          </tr>
+          <tr class="bg-gray-200 text-black text-center">
+            <td class="py-2 px-4">6º</td>
+            <td class="py-2 px-4">2º ESO 1: Confianza Collage sueños || 2º ESO 2: Confianza Collage sueños || 4º ESO 1: Confianza Traje de novia || 4º ESO 2: Comunicación Legos y dibujo || 1º Bachillerato: Creatividad Negociar cartas</td>
+        </tr>
         </tbody>
-      </table>
+    </table>
     </div>
   </div>
 </div>
 
+<div
+  id="detallesModalEsoBachillerato"
+  class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden z-10"
+>
+  <div
+    class="modal-enter bg-white text-gray-800 rounded-2xl shadow-2xl w-11/12 max-w-3xl p-8 relative"
+  >
+    <!-- Botón de cierre -->
+    <button
+      onclick="closeModal('detallesModalEsoBachillerato')"
+      class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-3xl font-bold"
+    >
+      &times;
+    </button>
+
+    <!-- Título principal -->
+    <h1 class="text-3xl font-extrabold text-center text-blue-600 mb-6">
+      Actividades Principales
+    </h1>
+
+    <!-- Sección 1 -->
+    <div class="mb-6 overflow-auto content">
+      <h2 class="text-2xl font-semibold text-gray-700 mb-3">
+        Conoce las Empresas Tecnológicas:
+      </h2>
+      <ul class="list-disc list-inside text-gray-600 space-y-2">
+        <li>
+          <strong>Exhibición de Empresas:</strong> Conoce productos y servicios innovadores.
+        </li>
+        <li>
+          <strong>Networking:</strong> Intercambia ideas con empresarios y profesionales.
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 <style>
   .info-container {
     padding: 2.5rem;
