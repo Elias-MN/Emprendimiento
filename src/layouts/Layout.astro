@@ -4,6 +4,9 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+import  SpeedInsights  from "@vercel/speed-insights/astro"
+
 ---
 
 <!doctype html>
@@ -21,6 +24,7 @@ const { title } = Astro.props;
     </script>
   </head>
   <body>
+    <SpeedInsights/>
     <slot />
     <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
   </body>
